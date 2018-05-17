@@ -28,7 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1002097A7F107C898CA3BC71 /* UIPickers.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = UIPickers.podspec; path = ../UIPickers.podspec; sourceTree = "<group>"; };
+		1002097A7F107C898CA3BC71 /* UIPickers.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = UIPickers.podspec; path = ../UIPickers.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		184B170DD5B6E05DC723B6EE /* Pods-UIPickers_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIPickers_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UIPickers_Example/Pods-UIPickers_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* UIPickers_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIPickers_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -40,8 +40,8 @@
 		607FACE51AFB9204008FA782 /* UIPickers_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIPickers_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		70D9EA3DC9002DC99CF53317 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		8DFAC27F42E5FDA5B9EC9E72 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		70D9EA3DC9002DC99CF53317 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		8DFAC27F42E5FDA5B9EC9E72 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		941DD0B4DD67956B8DE83AEB /* Pods_UIPickers_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UIPickers_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEFA87C4AE16A48F05DDE897 /* Pods-UIPickers_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIPickers_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UIPickers_Tests/Pods-UIPickers_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		CD5AA6D9BA95315FBE012CAD /* Pods_UIPickers_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UIPickers_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };

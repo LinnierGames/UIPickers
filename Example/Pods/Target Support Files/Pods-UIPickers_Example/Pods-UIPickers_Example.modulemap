@@ -1,0 +1,6 @@
+framework module Pods_UIPickers_Example {
+  umbrella header "Pods-UIPickers_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

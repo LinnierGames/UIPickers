@@ -1,0 +1,1040 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		051A816D6DD0CAE13496DDCFE0829167 /* UIImage+Diff.h in Headers */ = {isa = PBXBuildFile; fileRef = 85E250EF19C5B5671AEC10BEB508D087 /* UIImage+Diff.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		07D0F3D05061900A52CDBB287ABDE47E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E88A450A84E3957158B3B3459740AA /* Foundation.framework */; };
+		094973D2D2F1E3B2E772F93C8147C6B9 /* UIApplication+StrictKeyWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EECE81A9AEC1ED1057A9C3C88DBCEBE /* UIApplication+StrictKeyWindow.m */; };
+		1AB7934C16CE49DE196FFC7BE7278287 /* SwiftSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97545C39C4A5EE2631DD9FFECE76A40 /* SwiftSupport.swift */; };
+		2F485B69F51E4F723A38410F31F08550 /* FBSnapshotTestController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1374B79237CAC07693E99442FBED1F15 /* FBSnapshotTestController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		35DD05FD595A6FE7F5A0692D12E319DC /* UIImage+Diff.m in Sources */ = {isa = PBXBuildFile; fileRef = B9CEF7D6C5E08AB80E58DABC75D882BC /* UIImage+Diff.m */; };
+		420EF14E146FE3A6663AF28E84DF9B26 /* UIPickers-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BC227AFCCE04801D599D7815D527EEE0 /* UIPickers-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		421CDD701AEE0F2458A84200366CDD0F /* UIImage+Snapshot.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B161931541BFE46DFEA2092EDDDA815 /* UIImage+Snapshot.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		4BD9229C7A195D7585706144125320AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E88A450A84E3957158B3B3459740AA /* Foundation.framework */; };
+		506D761F91EC3583789A837C559972FE /* FBSnapshotTestCase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4792533D7EE0F440EE722DA4999E845C /* FBSnapshotTestCase-dummy.m */; };
+		511BDDE6D14938858B78A07BC1E2F2B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E88A450A84E3957158B3B3459740AA /* Foundation.framework */; };
+		69DA8B003216466C60F029CBD79897F1 /* UIImage+Compare.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5E22F9517F21D3A0251F88FCAB281E /* UIImage+Compare.m */; };
+		756564ABAF2892FE7140C92A1CDDCF65 /* UIImage+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DBFBDCC891B770A2AC9EF0FB164B751 /* UIImage+Snapshot.m */; };
+		7B2220521607FCC54E6A0E14CB909812 /* Pods-UIPickers_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EDC0EE88B71FFC0DA817C4D30FAC4D3A /* Pods-UIPickers_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7E9B14D5F8842A86CA86F2AF45230725 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A8F339250A1C3C5C5C5364254007103 /* XCTest.framework */; };
+		836AE487A910EEEF80C2F94712B0921C /* Pods-UIPickers_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A807691277B21329D04B14F7FC17EA4 /* Pods-UIPickers_Example-dummy.m */; };
+		841FF232C33C7D49C58CEFDBE7EEB92B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA323C90663942983643D7A4D1F697C8 /* UIKit.framework */; };
+		91D0138ACFAD733E4061F12E450C336C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E88A450A84E3957158B3B3459740AA /* Foundation.framework */; };
+		9673CF780F48C8E4EC2A331717B1F67C /* FBSnapshotTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = E37899BD4B349060AA147E2A3721D3A2 /* FBSnapshotTestCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A4F69F3477A935285620AC3031C5C848 /* FBSnapshotTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 052258A488A96C35531FAC73C4F42924 /* FBSnapshotTestController.m */; };
+		A90F1DE8054D658B3D5E394DE09E2CC9 /* UIPickers-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E13035C765227442464174C190C9D3 /* UIPickers-dummy.m */; };
+		AD3D8B2BC9FCFF8D40EF95E1E084B623 /* Pods-UIPickers_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 37DA24EE9E6B931844E4AB2AB1FB306D /* Pods-UIPickers_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B27DFD6025D94758785918F1D6F6C060 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A27810809BAD71E4022600B21251449F /* QuartzCore.framework */; };
+		B758FB09FE2C06C1B8E36A71A9D76D41 /* FBSnapshotTestCase-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A11D5B54955E3381F067364E427B571A /* FBSnapshotTestCase-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BC952FC04FC963C1294DCD619C9B6B3B /* UIApplication+StrictKeyWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = B9109B8B333B5A1A3E92EFC09EDC10AC /* UIApplication+StrictKeyWindow.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BE14F2198CDB0DAD98A567981D21C7A1 /* FBSnapshotTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 39577E2B806B8B2D019998DE60728F63 /* FBSnapshotTestCase.m */; };
+		BFCE460CC33E8872B7156D4166340178 /* FBSnapshotTestCasePlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E3DB4D092B985E76E227F7F313C6981 /* FBSnapshotTestCasePlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CAFA5E486BCE117A7D8C0FBF9DA6666B /* UIImage+Compare.h in Headers */ = {isa = PBXBuildFile; fileRef = 432938111B6FF0189EFFEDF2F845B308 /* UIImage+Compare.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		DB7A106243AC974FC7EBEB00B506C786 /* FBSnapshotTestCasePlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A2557E7CE20AACCD1B28B1CD1F920D /* FBSnapshotTestCasePlatform.m */; };
+		E301A35ECE8D77008C367F345D8BFAC6 /* Pods-UIPickers_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC52601EE0CEC15E60F9CC34262A082 /* Pods-UIPickers_Tests-dummy.m */; };
+		E9E91D2120AE302F0039E3ED /* UIOptionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E91D1C20AE302F0039E3ED /* UIOptionButton.swift */; };
+		E9E91D2220AE302F0039E3ED /* UIEntryPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E91D1D20AE302F0039E3ED /* UIEntryPickerView.swift */; };
+		E9E91D2320AE302F0039E3ED /* UIPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E91D1E20AE302F0039E3ED /* UIPickerViewController.swift */; };
+		E9E91D2420AE302F0039E3ED /* UIEntryPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E91D1F20AE302F0039E3ED /* UIEntryPickerViewController.swift */; };
+		E9E91D2520AE302F0039E3ED /* UICalendarDatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E91D2020AE302F0039E3ED /* UICalendarDatePickerViewController.swift */; };
+		E9E91D2720AE31C60039E3ED /* Date+FormattedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E91D2620AE31C60039E3ED /* Date+FormattedStrings.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1EBAA6BE636E4A457BD36FF2F2437345 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 334CE3F5306D100FD8F4B0298D021560;
+			remoteInfo = "Pods-UIPickers_Example";
+		};
+		566D63FDAE2FE6C2457725CE841863C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 34CD2E3428AB802BACA62286FF5074B1;
+			remoteInfo = FBSnapshotTestCase;
+		};
+		DBFF932DE67509D53F68D2F81BAF2C47 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 055C5DF23D08D469496175AC0A70A00D;
+			remoteInfo = UIPickers;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		052258A488A96C35531FAC73C4F42924 /* FBSnapshotTestController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestController.m; path = FBSnapshotTestCase/FBSnapshotTestController.m; sourceTree = "<group>"; };
+		0B161931541BFE46DFEA2092EDDDA815 /* UIImage+Snapshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Snapshot.h"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.h"; sourceTree = "<group>"; };
+		1329E217D927B57E27DAABC961D868AF /* UIPickers.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = UIPickers.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		1374B79237CAC07693E99442FBED1F15 /* FBSnapshotTestController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestController.h; path = FBSnapshotTestCase/FBSnapshotTestController.h; sourceTree = "<group>"; };
+		1FB3F0CFC70551E90AFA8EC5B307B6F2 /* Pods-UIPickers_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UIPickers_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		23E13035C765227442464174C190C9D3 /* UIPickers-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIPickers-dummy.m"; sourceTree = "<group>"; };
+		2685B173B7902A257675BB40D824E6D1 /* Pods_UIPickers_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UIPickers_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		291778EA1439BE7C7503B23A1C74B9E2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2A807691277B21329D04B14F7FC17EA4 /* Pods-UIPickers_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-UIPickers_Example-dummy.m"; sourceTree = "<group>"; };
+		2B1A55E2613CC6BE4F1FA381B397C48E /* UIPickers-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIPickers-prefix.pch"; sourceTree = "<group>"; };
+		2E7861FAB72F5984D7522767B061F9F5 /* Pods-UIPickers_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UIPickers_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		2EECE81A9AEC1ED1057A9C3C88DBCEBE /* UIApplication+StrictKeyWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+StrictKeyWindow.m"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.m"; sourceTree = "<group>"; };
+		37DA24EE9E6B931844E4AB2AB1FB306D /* Pods-UIPickers_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-UIPickers_Example-umbrella.h"; sourceTree = "<group>"; };
+		39577E2B806B8B2D019998DE60728F63 /* FBSnapshotTestCase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCase.m; path = FBSnapshotTestCase/FBSnapshotTestCase.m; sourceTree = "<group>"; };
+		3A8F339250A1C3C5C5C5364254007103 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		3B5E22F9517F21D3A0251F88FCAB281E /* UIImage+Compare.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Compare.m"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.m"; sourceTree = "<group>"; };
+		3DBFBDCC891B770A2AC9EF0FB164B751 /* UIImage+Snapshot.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Snapshot.m"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.m"; sourceTree = "<group>"; };
+		432938111B6FF0189EFFEDF2F845B308 /* UIImage+Compare.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Compare.h"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.h"; sourceTree = "<group>"; };
+		4792533D7EE0F440EE722DA4999E845C /* FBSnapshotTestCase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FBSnapshotTestCase-dummy.m"; sourceTree = "<group>"; };
+		58A2557E7CE20AACCD1B28B1CD1F920D /* FBSnapshotTestCasePlatform.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCasePlatform.m; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.m; sourceTree = "<group>"; };
+		67E276593855381568F725E69496F29C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6CC9481EFE7CDBB3BE741FADB01AC2D9 /* UIPickers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIPickers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D742D09443091D89A644717A7DD2590 /* Pods-UIPickers_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-UIPickers_Tests.modulemap"; sourceTree = "<group>"; };
+		7B37D7C695D5C6C47A7C093595CD4F06 /* FBSnapshotTestCase.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSnapshotTestCase.xcconfig; sourceTree = "<group>"; };
+		7CC52601EE0CEC15E60F9CC34262A082 /* Pods-UIPickers_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-UIPickers_Tests-dummy.m"; sourceTree = "<group>"; };
+		7E3DB4D092B985E76E227F7F313C6981 /* FBSnapshotTestCasePlatform.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCasePlatform.h; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.h; sourceTree = "<group>"; };
+		81ED6CA703BC7D0825D40F2801B6F00B /* Pods-UIPickers_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UIPickers_Example-resources.sh"; sourceTree = "<group>"; };
+		83EA9EDAA3B7348243BFC4CD6522DC10 /* Pods-UIPickers_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UIPickers_Tests-resources.sh"; sourceTree = "<group>"; };
+		85E250EF19C5B5671AEC10BEB508D087 /* UIImage+Diff.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Diff.h"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.h"; sourceTree = "<group>"; };
+		897C657E494D31F1CDFE990B62DF6BBC /* Pods_UIPickers_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UIPickers_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		970484E888EFEB780385A206E2D6F857 /* Pods-UIPickers_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UIPickers_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		989FDB9D568E39D477F6AE27A734392E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A11D5B54955E3381F067364E427B571A /* FBSnapshotTestCase-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-umbrella.h"; sourceTree = "<group>"; };
+		A27810809BAD71E4022600B21251449F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		A2F822657870565F168177094F628C87 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A61F5BF65619F0071078219F536E1E37 /* Pods-UIPickers_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-UIPickers_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		AA323C90663942983643D7A4D1F697C8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		AE4C503E550B4589B60DF84229005EC9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFC28483FAD5B369D84099499D19CB85 /* Pods-UIPickers_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UIPickers_Example.release.xcconfig"; sourceTree = "<group>"; };
+		B9109B8B333B5A1A3E92EFC09EDC10AC /* UIApplication+StrictKeyWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIApplication+StrictKeyWindow.h"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.h"; sourceTree = "<group>"; };
+		B9CEF7D6C5E08AB80E58DABC75D882BC /* UIImage+Diff.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Diff.m"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.m"; sourceTree = "<group>"; };
+		BAF38304B0AF20C95E9F46CD309BBB8A /* Pods-UIPickers_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UIPickers_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		BC227AFCCE04801D599D7815D527EEE0 /* UIPickers-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIPickers-umbrella.h"; sourceTree = "<group>"; };
+		C56091F87414F2B1A47C4B060D77EEF1 /* UIPickers.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = UIPickers.modulemap; sourceTree = "<group>"; };
+		C6E88A450A84E3957158B3B3459740AA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		CFE4103D2D39FBE6523127475612B822 /* UIPickers.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UIPickers.xcconfig; sourceTree = "<group>"; };
+		D38D38FA6184D9BAD41386F1189B3FF0 /* Pods-UIPickers_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-UIPickers_Example.modulemap"; sourceTree = "<group>"; };
+		D8370FC0DC45BBAB525DE03B39B47661 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		D97545C39C4A5EE2631DD9FFECE76A40 /* SwiftSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftSupport.swift; path = FBSnapshotTestCase/SwiftSupport.swift; sourceTree = "<group>"; };
+		E37899BD4B349060AA147E2A3721D3A2 /* FBSnapshotTestCase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCase.h; path = FBSnapshotTestCase/FBSnapshotTestCase.h; sourceTree = "<group>"; };
+		E7E1C8B0EF7A1EAC4FEE9C715648823A /* Pods-UIPickers_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-UIPickers_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E9E91D1C20AE302F0039E3ED /* UIOptionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIOptionButton.swift; path = UIPickers/Classes/UIOptionButton.swift; sourceTree = "<group>"; };
+		E9E91D1D20AE302F0039E3ED /* UIEntryPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIEntryPickerView.swift; path = UIPickers/Classes/UIEntryPickerView.swift; sourceTree = "<group>"; };
+		E9E91D1E20AE302F0039E3ED /* UIPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIPickerViewController.swift; path = UIPickers/Classes/UIPickerViewController.swift; sourceTree = "<group>"; };
+		E9E91D1F20AE302F0039E3ED /* UIEntryPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIEntryPickerViewController.swift; path = UIPickers/Classes/UIEntryPickerViewController.swift; sourceTree = "<group>"; };
+		E9E91D2020AE302F0039E3ED /* UICalendarDatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UICalendarDatePickerViewController.swift; path = UIPickers/Classes/UICalendarDatePickerViewController.swift; sourceTree = "<group>"; };
+		E9E91D2620AE31C60039E3ED /* Date+FormattedStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Date+FormattedStrings.swift"; path = "UIPickers/Assets/Date+FormattedStrings.swift"; sourceTree = "<group>"; };
+		EAED52AF3EB4D3F211D7CFF69F08C7DD /* Pods-UIPickers_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UIPickers_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		EDC0EE88B71FFC0DA817C4D30FAC4D3A /* Pods-UIPickers_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-UIPickers_Tests-umbrella.h"; sourceTree = "<group>"; };
+		EF129A96D2E985877AF2F172C231E4D9 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF519A026B10AC73ABBE6E658308B29D /* FBSnapshotTestCase-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-prefix.pch"; sourceTree = "<group>"; };
+		F10CBDEE32E5F6BDECFB3D41F7DD0B03 /* FBSnapshotTestCase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FBSnapshotTestCase.modulemap; sourceTree = "<group>"; };
+		FAF3DB9C67E26A3D491FFDA56F0F6EDA /* Pods-UIPickers_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UIPickers_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		FBE3CAE8007FD66FFB2812C5FC34630B /* Pods-UIPickers_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UIPickers_Example-frameworks.sh"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0EB38CD2A2DDF81622F8784D5B9BA4E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				511BDDE6D14938858B78A07BC1E2F2B9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D421A30A1BDB7E1C4216F64D0C939B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91D0138ACFAD733E4061F12E450C336C /* Foundation.framework in Frameworks */,
+				B27DFD6025D94758785918F1D6F6C060 /* QuartzCore.framework in Frameworks */,
+				841FF232C33C7D49C58CEFDBE7EEB92B /* UIKit.framework in Frameworks */,
+				7E9B14D5F8842A86CA86F2AF45230725 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E93D2E387FCE90420B0AC8A7C41B8B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BD9229C7A195D7585706144125320AB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF5B8D058535151D3450A500111A8014 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07D0F3D05061900A52CDBB287ABDE47E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		059DB37346EF4760DA5AF59E346BAB94 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D12456799DE9BEBB9079B1B1BBE52E77 /* Pods-UIPickers_Example */,
+				2217EAA6787BDE6B3AEFC77C8B74313B /* Pods-UIPickers_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8D22B0D091B0427E43C82354D9CA8E06 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2217EAA6787BDE6B3AEFC77C8B74313B /* Pods-UIPickers_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				AE4C503E550B4589B60DF84229005EC9 /* Info.plist */,
+				6D742D09443091D89A644717A7DD2590 /* Pods-UIPickers_Tests.modulemap */,
+				E7E1C8B0EF7A1EAC4FEE9C715648823A /* Pods-UIPickers_Tests-acknowledgements.markdown */,
+				FAF3DB9C67E26A3D491FFDA56F0F6EDA /* Pods-UIPickers_Tests-acknowledgements.plist */,
+				7CC52601EE0CEC15E60F9CC34262A082 /* Pods-UIPickers_Tests-dummy.m */,
+				BAF38304B0AF20C95E9F46CD309BBB8A /* Pods-UIPickers_Tests-frameworks.sh */,
+				83EA9EDAA3B7348243BFC4CD6522DC10 /* Pods-UIPickers_Tests-resources.sh */,
+				EDC0EE88B71FFC0DA817C4D30FAC4D3A /* Pods-UIPickers_Tests-umbrella.h */,
+				2E7861FAB72F5984D7522767B061F9F5 /* Pods-UIPickers_Tests.debug.xcconfig */,
+				970484E888EFEB780385A206E2D6F857 /* Pods-UIPickers_Tests.release.xcconfig */,
+			);
+			name = "Pods-UIPickers_Tests";
+			path = "Target Support Files/Pods-UIPickers_Tests";
+			sourceTree = "<group>";
+		};
+		2287B5EBEAA3C332F8DB9A1E61F5B097 /* FBSnapshotTestCase */ = {
+			isa = PBXGroup;
+			children = (
+				F35791481CAFDD8E7715AE1B44687328 /* Core */,
+				3288FCB8E15F6401DE6220AE5CA1D27B /* Support Files */,
+				99E46DD4AB2256791F111C718CB0EEF8 /* SwiftSupport */,
+			);
+			path = FBSnapshotTestCase;
+			sourceTree = "<group>";
+		};
+		3288FCB8E15F6401DE6220AE5CA1D27B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F10CBDEE32E5F6BDECFB3D41F7DD0B03 /* FBSnapshotTestCase.modulemap */,
+				7B37D7C695D5C6C47A7C093595CD4F06 /* FBSnapshotTestCase.xcconfig */,
+				4792533D7EE0F440EE722DA4999E845C /* FBSnapshotTestCase-dummy.m */,
+				EF519A026B10AC73ABBE6E658308B29D /* FBSnapshotTestCase-prefix.pch */,
+				A11D5B54955E3381F067364E427B571A /* FBSnapshotTestCase-umbrella.h */,
+				67E276593855381568F725E69496F29C /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/FBSnapshotTestCase";
+			sourceTree = "<group>";
+		};
+		3B5AA1D796B65194C3BA8ADE554FDDDC /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C37A89EB7F44E64B553F6A922D8361A8 /* UIPickers */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				3B5AA1D796B65194C3BA8ADE554FDDDC /* Development Pods */,
+				14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */,
+				FBD2D672921284E66F309CA3462F84D6 /* Pods */,
+				988009B6C13CBDD62FA5F0E3C559ED82 /* Products */,
+				059DB37346EF4760DA5AF59E346BAB94 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8D22B0D091B0427E43C82354D9CA8E06 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				C6E88A450A84E3957158B3B3459740AA /* Foundation.framework */,
+				A27810809BAD71E4022600B21251449F /* QuartzCore.framework */,
+				AA323C90663942983643D7A4D1F697C8 /* UIKit.framework */,
+				3A8F339250A1C3C5C5C5364254007103 /* XCTest.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		988009B6C13CBDD62FA5F0E3C559ED82 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF129A96D2E985877AF2F172C231E4D9 /* FBSnapshotTestCase.framework */,
+				897C657E494D31F1CDFE990B62DF6BBC /* Pods_UIPickers_Example.framework */,
+				2685B173B7902A257675BB40D824E6D1 /* Pods_UIPickers_Tests.framework */,
+				6CC9481EFE7CDBB3BE741FADB01AC2D9 /* UIPickers.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		99E46DD4AB2256791F111C718CB0EEF8 /* SwiftSupport */ = {
+			isa = PBXGroup;
+			children = (
+				D97545C39C4A5EE2631DD9FFECE76A40 /* SwiftSupport.swift */,
+			);
+			name = SwiftSupport;
+			sourceTree = "<group>";
+		};
+		C37A89EB7F44E64B553F6A922D8361A8 /* UIPickers */ = {
+			isa = PBXGroup;
+			children = (
+				E9E91D2020AE302F0039E3ED /* UICalendarDatePickerViewController.swift */,
+				E9E91D1D20AE302F0039E3ED /* UIEntryPickerView.swift */,
+				E9E91D1F20AE302F0039E3ED /* UIEntryPickerViewController.swift */,
+				E9E91D1C20AE302F0039E3ED /* UIOptionButton.swift */,
+				E9E91D1E20AE302F0039E3ED /* UIPickerViewController.swift */,
+				E9E91D2620AE31C60039E3ED /* Date+FormattedStrings.swift */,
+				E9D32228B8930BFC0845B874FD67DE18 /* Pod */,
+				D8A260172CC3992F92919A4FB7B3D985 /* Support Files */,
+			);
+			name = UIPickers;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		D12456799DE9BEBB9079B1B1BBE52E77 /* Pods-UIPickers_Example */ = {
+			isa = PBXGroup;
+			children = (
+				989FDB9D568E39D477F6AE27A734392E /* Info.plist */,
+				D38D38FA6184D9BAD41386F1189B3FF0 /* Pods-UIPickers_Example.modulemap */,
+				A61F5BF65619F0071078219F536E1E37 /* Pods-UIPickers_Example-acknowledgements.markdown */,
+				1FB3F0CFC70551E90AFA8EC5B307B6F2 /* Pods-UIPickers_Example-acknowledgements.plist */,
+				2A807691277B21329D04B14F7FC17EA4 /* Pods-UIPickers_Example-dummy.m */,
+				FBE3CAE8007FD66FFB2812C5FC34630B /* Pods-UIPickers_Example-frameworks.sh */,
+				81ED6CA703BC7D0825D40F2801B6F00B /* Pods-UIPickers_Example-resources.sh */,
+				37DA24EE9E6B931844E4AB2AB1FB306D /* Pods-UIPickers_Example-umbrella.h */,
+				EAED52AF3EB4D3F211D7CFF69F08C7DD /* Pods-UIPickers_Example.debug.xcconfig */,
+				AFC28483FAD5B369D84099499D19CB85 /* Pods-UIPickers_Example.release.xcconfig */,
+			);
+			name = "Pods-UIPickers_Example";
+			path = "Target Support Files/Pods-UIPickers_Example";
+			sourceTree = "<group>";
+		};
+		D8A260172CC3992F92919A4FB7B3D985 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A2F822657870565F168177094F628C87 /* Info.plist */,
+				C56091F87414F2B1A47C4B060D77EEF1 /* UIPickers.modulemap */,
+				CFE4103D2D39FBE6523127475612B822 /* UIPickers.xcconfig */,
+				23E13035C765227442464174C190C9D3 /* UIPickers-dummy.m */,
+				2B1A55E2613CC6BE4F1FA381B397C48E /* UIPickers-prefix.pch */,
+				BC227AFCCE04801D599D7815D527EEE0 /* UIPickers-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/UIPickers";
+			sourceTree = "<group>";
+		};
+		E9D32228B8930BFC0845B874FD67DE18 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				D8370FC0DC45BBAB525DE03B39B47661 /* LICENSE */,
+				291778EA1439BE7C7503B23A1C74B9E2 /* README.md */,
+				1329E217D927B57E27DAABC961D868AF /* UIPickers.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		F35791481CAFDD8E7715AE1B44687328 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E37899BD4B349060AA147E2A3721D3A2 /* FBSnapshotTestCase.h */,
+				39577E2B806B8B2D019998DE60728F63 /* FBSnapshotTestCase.m */,
+				7E3DB4D092B985E76E227F7F313C6981 /* FBSnapshotTestCasePlatform.h */,
+				58A2557E7CE20AACCD1B28B1CD1F920D /* FBSnapshotTestCasePlatform.m */,
+				1374B79237CAC07693E99442FBED1F15 /* FBSnapshotTestController.h */,
+				052258A488A96C35531FAC73C4F42924 /* FBSnapshotTestController.m */,
+				B9109B8B333B5A1A3E92EFC09EDC10AC /* UIApplication+StrictKeyWindow.h */,
+				2EECE81A9AEC1ED1057A9C3C88DBCEBE /* UIApplication+StrictKeyWindow.m */,
+				432938111B6FF0189EFFEDF2F845B308 /* UIImage+Compare.h */,
+				3B5E22F9517F21D3A0251F88FCAB281E /* UIImage+Compare.m */,
+				85E250EF19C5B5671AEC10BEB508D087 /* UIImage+Diff.h */,
+				B9CEF7D6C5E08AB80E58DABC75D882BC /* UIImage+Diff.m */,
+				0B161931541BFE46DFEA2092EDDDA815 /* UIImage+Snapshot.h */,
+				3DBFBDCC891B770A2AC9EF0FB164B751 /* UIImage+Snapshot.m */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		FBD2D672921284E66F309CA3462F84D6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2287B5EBEAA3C332F8DB9A1E61F5B097 /* FBSnapshotTestCase */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		600DA49BA933734ED820B8CDB363E839 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				420EF14E146FE3A6663AF28E84DF9B26 /* UIPickers-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C8B09012E139647FE1BB53D69418B38 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD3D8B2BC9FCFF8D40EF95E1E084B623 /* Pods-UIPickers_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D6A1044064A28BA35429EFFFC6A0FD5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B2220521607FCC54E6A0E14CB909812 /* Pods-UIPickers_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DC6F5AC11E37A1EB45C6473C9E800B6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B758FB09FE2C06C1B8E36A71A9D76D41 /* FBSnapshotTestCase-umbrella.h in Headers */,
+				9673CF780F48C8E4EC2A331717B1F67C /* FBSnapshotTestCase.h in Headers */,
+				BFCE460CC33E8872B7156D4166340178 /* FBSnapshotTestCasePlatform.h in Headers */,
+				2F485B69F51E4F723A38410F31F08550 /* FBSnapshotTestController.h in Headers */,
+				BC952FC04FC963C1294DCD619C9B6B3B /* UIApplication+StrictKeyWindow.h in Headers */,
+				CAFA5E486BCE117A7D8C0FBF9DA6666B /* UIImage+Compare.h in Headers */,
+				051A816D6DD0CAE13496DDCFE0829167 /* UIImage+Diff.h in Headers */,
+				421CDD701AEE0F2458A84200366CDD0F /* UIImage+Snapshot.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		055C5DF23D08D469496175AC0A70A00D /* UIPickers */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6403F11F89EE5AE2D64325B962DA871 /* Build configuration list for PBXNativeTarget "UIPickers" */;
+			buildPhases = (
+				F25599E6CC0556B617CD432483C71CBA /* Sources */,
+				5E93D2E387FCE90420B0AC8A7C41B8B9 /* Frameworks */,
+				600DA49BA933734ED820B8CDB363E839 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UIPickers;
+			productName = UIPickers;
+			productReference = 6CC9481EFE7CDBB3BE741FADB01AC2D9 /* UIPickers.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		334CE3F5306D100FD8F4B0298D021560 /* Pods-UIPickers_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13CA032BDABD83A70C6E0F629283D5C6 /* Build configuration list for PBXNativeTarget "Pods-UIPickers_Example" */;
+			buildPhases = (
+				9A1A7F4785584022C3CC4E145CE910D8 /* Sources */,
+				0EB38CD2A2DDF81622F8784D5B9BA4E2 /* Frameworks */,
+				6C8B09012E139647FE1BB53D69418B38 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				865369E4536D7BB0D2E34DA34486F3EE /* PBXTargetDependency */,
+			);
+			name = "Pods-UIPickers_Example";
+			productName = "Pods-UIPickers_Example";
+			productReference = 897C657E494D31F1CDFE990B62DF6BBC /* Pods_UIPickers_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		34CD2E3428AB802BACA62286FF5074B1 /* FBSnapshotTestCase */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F28097D43AF5CD8DA838ABD52A053790 /* Build configuration list for PBXNativeTarget "FBSnapshotTestCase" */;
+			buildPhases = (
+				E2E80CCD063D04B57A1A5E140726E8A4 /* Sources */,
+				1D421A30A1BDB7E1C4216F64D0C939B1 /* Frameworks */,
+				9DC6F5AC11E37A1EB45C6473C9E800B6 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FBSnapshotTestCase;
+			productName = FBSnapshotTestCase;
+			productReference = EF129A96D2E985877AF2F172C231E4D9 /* FBSnapshotTestCase.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		80027EEEA6DC5324C71867D603D3DAD4 /* Pods-UIPickers_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3411402B9C7FCA510ECA36856EFAF941 /* Build configuration list for PBXNativeTarget "Pods-UIPickers_Tests" */;
+			buildPhases = (
+				DE3CB31F73D66D5E014BBEC5F40916D8 /* Sources */,
+				FF5B8D058535151D3450A500111A8014 /* Frameworks */,
+				6D6A1044064A28BA35429EFFFC6A0FD5 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8150BB87BC03D2DFEDDAA9A843902C7D /* PBXTargetDependency */,
+				836E2BB0F71846EEA181AC49D83B8155 /* PBXTargetDependency */,
+			);
+			name = "Pods-UIPickers_Tests";
+			productName = "Pods-UIPickers_Tests";
+			productReference = 2685B173B7902A257675BB40D824E6D1 /* Pods_UIPickers_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				TargetAttributes = {
+					055C5DF23D08D469496175AC0A70A00D = {
+						LastSwiftMigration = 0930;
+					};
+				};
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 988009B6C13CBDD62FA5F0E3C559ED82 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				34CD2E3428AB802BACA62286FF5074B1 /* FBSnapshotTestCase */,
+				334CE3F5306D100FD8F4B0298D021560 /* Pods-UIPickers_Example */,
+				80027EEEA6DC5324C71867D603D3DAD4 /* Pods-UIPickers_Tests */,
+				055C5DF23D08D469496175AC0A70A00D /* UIPickers */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9A1A7F4785584022C3CC4E145CE910D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				836AE487A910EEEF80C2F94712B0921C /* Pods-UIPickers_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE3CB31F73D66D5E014BBEC5F40916D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E301A35ECE8D77008C367F345D8BFAC6 /* Pods-UIPickers_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2E80CCD063D04B57A1A5E140726E8A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				506D761F91EC3583789A837C559972FE /* FBSnapshotTestCase-dummy.m in Sources */,
+				BE14F2198CDB0DAD98A567981D21C7A1 /* FBSnapshotTestCase.m in Sources */,
+				DB7A106243AC974FC7EBEB00B506C786 /* FBSnapshotTestCasePlatform.m in Sources */,
+				A4F69F3477A935285620AC3031C5C848 /* FBSnapshotTestController.m in Sources */,
+				1AB7934C16CE49DE196FFC7BE7278287 /* SwiftSupport.swift in Sources */,
+				094973D2D2F1E3B2E772F93C8147C6B9 /* UIApplication+StrictKeyWindow.m in Sources */,
+				69DA8B003216466C60F029CBD79897F1 /* UIImage+Compare.m in Sources */,
+				35DD05FD595A6FE7F5A0692D12E319DC /* UIImage+Diff.m in Sources */,
+				756564ABAF2892FE7140C92A1CDDCF65 /* UIImage+Snapshot.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F25599E6CC0556B617CD432483C71CBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9E91D2520AE302F0039E3ED /* UICalendarDatePickerViewController.swift in Sources */,
+				E9E91D2220AE302F0039E3ED /* UIEntryPickerView.swift in Sources */,
+				E9E91D2120AE302F0039E3ED /* UIOptionButton.swift in Sources */,
+				E9E91D2720AE31C60039E3ED /* Date+FormattedStrings.swift in Sources */,
+				E9E91D2320AE302F0039E3ED /* UIPickerViewController.swift in Sources */,
+				A90F1DE8054D658B3D5E394DE09E2CC9 /* UIPickers-dummy.m in Sources */,
+				E9E91D2420AE302F0039E3ED /* UIEntryPickerViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8150BB87BC03D2DFEDDAA9A843902C7D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FBSnapshotTestCase;
+			target = 34CD2E3428AB802BACA62286FF5074B1 /* FBSnapshotTestCase */;
+			targetProxy = 566D63FDAE2FE6C2457725CE841863C2 /* PBXContainerItemProxy */;
+		};
+		836E2BB0F71846EEA181AC49D83B8155 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-UIPickers_Example";
+			target = 334CE3F5306D100FD8F4B0298D021560 /* Pods-UIPickers_Example */;
+			targetProxy = 1EBAA6BE636E4A457BD36FF2F2437345 /* PBXContainerItemProxy */;
+		};
+		865369E4536D7BB0D2E34DA34486F3EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = UIPickers;
+			target = 055C5DF23D08D469496175AC0A70A00D /* UIPickers */;
+			targetProxy = DBFF932DE67509D53F68D2F81BAF2C47 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		246CED37F175AF5E851C3839F63F9521 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B37D7C695D5C6C47A7C093595CD4F06 /* FBSnapshotTestCase.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FBSnapshotTestCase/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase.modulemap";
+				PRODUCT_MODULE_NAME = FBSnapshotTestCase;
+				PRODUCT_NAME = FBSnapshotTestCase;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2A1D36744CFF7CDE0B8E61B247E931FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFE4103D2D39FBE6523127475612B822 /* UIPickers.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/UIPickers/UIPickers-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/UIPickers/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/UIPickers/UIPickers.modulemap";
+				PRODUCT_MODULE_NAME = UIPickers;
+				PRODUCT_NAME = UIPickers;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3B73F4B08DD4669AEFFA31C137AF946A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E7861FAB72F5984D7522767B061F9F5 /* Pods-UIPickers_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-UIPickers_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-UIPickers_Tests/Pods-UIPickers_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		43463D8363B4AA4965DF2B057E2B0F65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAED52AF3EB4D3F211D7CFF69F08C7DD /* Pods-UIPickers_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-UIPickers_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-UIPickers_Example/Pods-UIPickers_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8059E05A032E532567AB2C07BEF148DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 970484E888EFEB780385A206E2D6F857 /* Pods-UIPickers_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-UIPickers_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-UIPickers_Tests/Pods-UIPickers_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8B33C5230DE4A9DFA6D8F46505DD7AF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		B42B54097A876E8A982CBF5DAA91B1AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		D66F46716D101234D142E2BC4ACEF70E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFE4103D2D39FBE6523127475612B822 /* UIPickers.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/UIPickers/UIPickers-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/UIPickers/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/UIPickers/UIPickers.modulemap";
+				PRODUCT_MODULE_NAME = UIPickers;
+				PRODUCT_NAME = UIPickers;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		EC2B16E08A82FFFAA496F1301724367A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B37D7C695D5C6C47A7C093595CD4F06 /* FBSnapshotTestCase.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FBSnapshotTestCase/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase.modulemap";
+				PRODUCT_MODULE_NAME = FBSnapshotTestCase;
+				PRODUCT_NAME = FBSnapshotTestCase;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		ED93BD5467737B4A89D9ACCBC8AF8B7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFC28483FAD5B369D84099499D19CB85 /* Pods-UIPickers_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-UIPickers_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-UIPickers_Example/Pods-UIPickers_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		13CA032BDABD83A70C6E0F629283D5C6 /* Build configuration list for PBXNativeTarget "Pods-UIPickers_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43463D8363B4AA4965DF2B057E2B0F65 /* Debug */,
+				ED93BD5467737B4A89D9ACCBC8AF8B7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B33C5230DE4A9DFA6D8F46505DD7AF7 /* Debug */,
+				B42B54097A876E8A982CBF5DAA91B1AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3411402B9C7FCA510ECA36856EFAF941 /* Build configuration list for PBXNativeTarget "Pods-UIPickers_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B73F4B08DD4669AEFFA31C137AF946A /* Debug */,
+				8059E05A032E532567AB2C07BEF148DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F28097D43AF5CD8DA838ABD52A053790 /* Build configuration list for PBXNativeTarget "FBSnapshotTestCase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				246CED37F175AF5E851C3839F63F9521 /* Debug */,
+				EC2B16E08A82FFFAA496F1301724367A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F6403F11F89EE5AE2D64325B962DA871 /* Build configuration list for PBXNativeTarget "UIPickers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D66F46716D101234D142E2BC4ACEF70E /* Debug */,
+				2A1D36744CFF7CDE0B8E61B247E931FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
