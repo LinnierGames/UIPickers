@@ -42,7 +42,7 @@
 		E9E91D2320AE302F0039E3ED /* UIPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E91D1E20AE302F0039E3ED /* UIPickerViewController.swift */; };
 		E9E91D2420AE302F0039E3ED /* UIEntryPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E91D1F20AE302F0039E3ED /* UIEntryPickerViewController.swift */; };
 		E9E91D2520AE302F0039E3ED /* UICalendarDatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E91D2020AE302F0039E3ED /* UICalendarDatePickerViewController.swift */; };
-		E9E91D2720AE31C60039E3ED /* Date+FormattedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E91D2620AE31C60039E3ED /* Date+FormattedStrings.swift */; };
+		E9E91D2920AE3EF10039E3ED /* Date+FormattedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E91D2820AE3EF00039E3ED /* Date+FormattedStrings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,7 +127,7 @@
 		E9E91D1E20AE302F0039E3ED /* UIPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIPickerViewController.swift; path = UIPickers/Classes/UIPickerViewController.swift; sourceTree = "<group>"; };
 		E9E91D1F20AE302F0039E3ED /* UIEntryPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIEntryPickerViewController.swift; path = UIPickers/Classes/UIEntryPickerViewController.swift; sourceTree = "<group>"; };
 		E9E91D2020AE302F0039E3ED /* UICalendarDatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UICalendarDatePickerViewController.swift; path = UIPickers/Classes/UICalendarDatePickerViewController.swift; sourceTree = "<group>"; };
-		E9E91D2620AE31C60039E3ED /* Date+FormattedStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Date+FormattedStrings.swift"; path = "UIPickers/Assets/Date+FormattedStrings.swift"; sourceTree = "<group>"; };
+		E9E91D2820AE3EF00039E3ED /* Date+FormattedStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Date+FormattedStrings.swift"; path = "UIPickers/Classes/Date+FormattedStrings.swift"; sourceTree = "<group>"; };
 		EAED52AF3EB4D3F211D7CFF69F08C7DD /* Pods-UIPickers_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UIPickers_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		EDC0EE88B71FFC0DA817C4D30FAC4D3A /* Pods-UIPickers_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-UIPickers_Tests-umbrella.h"; sourceTree = "<group>"; };
 		EF129A96D2E985877AF2F172C231E4D9 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -293,7 +293,7 @@
 				E9E91D1F20AE302F0039E3ED /* UIEntryPickerViewController.swift */,
 				E9E91D1C20AE302F0039E3ED /* UIOptionButton.swift */,
 				E9E91D1E20AE302F0039E3ED /* UIPickerViewController.swift */,
-				E9E91D2620AE31C60039E3ED /* Date+FormattedStrings.swift */,
+				E9E91D2820AE3EF00039E3ED /* Date+FormattedStrings.swift */,
 				E9D32228B8930BFC0845B874FD67DE18 /* Pod */,
 				D8A260172CC3992F92919A4FB7B3D985 /* Support Files */,
 			);
@@ -562,7 +562,7 @@
 				E9E91D2520AE302F0039E3ED /* UICalendarDatePickerViewController.swift in Sources */,
 				E9E91D2220AE302F0039E3ED /* UIEntryPickerView.swift in Sources */,
 				E9E91D2120AE302F0039E3ED /* UIOptionButton.swift in Sources */,
-				E9E91D2720AE31C60039E3ED /* Date+FormattedStrings.swift in Sources */,
+				E9E91D2920AE3EF10039E3ED /* Date+FormattedStrings.swift in Sources */,
 				E9E91D2320AE302F0039E3ED /* UIPickerViewController.swift in Sources */,
 				A90F1DE8054D658B3D5E394DE09E2CC9 /* UIPickers-dummy.m in Sources */,
 				E9E91D2420AE302F0039E3ED /* UIEntryPickerViewController.swift in Sources */,

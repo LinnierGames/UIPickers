@@ -136,7 +136,7 @@ open class UIEntryPickerView: UIView {
             
             let label = UILabel()
             label.textAlignment = .center
-            label.setContentCompressionResistancePriority(.required, for: .horizontal)
+            label.setContentCompressionResistancePriority(UILayoutPriority.required, for: UILayoutConstraintAxis.horizontal)
             label.widthAnchor.constraint(equalToConstant: self.focusSize.width).isActive = true
             label.text = anEntry.text
             label.adjustsFontSizeToFitWidth = true
