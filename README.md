@@ -22,7 +22,7 @@ pod 'UIPickers'
 
 ## Author
 
-linniergames, esericksanc@gmail.com
+LinnierGames
 
 ## License
 

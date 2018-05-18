@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'UIPickers'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'Customizable alert views'
 
 # This description is used to generate tags and improve search results.
@@ -17,7 +17,10 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = 'Customizable alert view which allows any views to nicely be presented in the body of an alert.'
+  s.description      =
+  <<-DESC
+    'Customizable alert view which allows any views to nicely be presented in the body of an alert.'
+  DESC
 
   s.homepage         = 'https://github.com/linniergames/UIPickers'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
