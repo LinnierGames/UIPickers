@@ -8,12 +8,21 @@
 
 import UIKit
 
+@objc public protocol UICalendarDatePickerViewControllerDelegate: UIDatePickerViewControllerDelegate {
+    @objc optional func calendarDatePicker(_ calendarDatePicker: UICalendarDatePickerViewController, didFinishWith selectedDate: Date, timeIncluded: Bool)
+}
+
 public class UICalendarDatePickerViewController: UIDatePickerViewController {
     
     public var isTimeIncluded: Bool = false {
         didSet {
             updateTimeButtonTitle()
         }
+    }
+    
+    public weak var calendarDelegate: UICalendarDatePickerViewControllerDelegate? {
+        set { self.delegate = newValue }
+        get { return self.delegate as! UICalendarDatePickerViewControllerDelegate? }
     }
     
     public var canAddTime: Bool = false
@@ -41,7 +50,6 @@ public class UICalendarDatePickerViewController: UIDatePickerViewController {
     
     private func updateTimeButtonTitle() {
         if isTimeIncluded {
-            
             addTimeButton.buttonTitle = self.date.formattedStringWith(.Time_noPadding_am_pm)
             addTimeButton.isShowingClearButton = true
         } else {
@@ -52,12 +60,16 @@ public class UICalendarDatePickerViewController: UIDatePickerViewController {
     
     // MARK: - IBACTIONS
     
+    public override func pressDone(button: UIButton) {
+        calendarDelegate?.calendarDatePicker?(self, didFinishWith: self.date, timeIncluded: self.isTimeIncluded)
+    }
+    
     // MARK: - LIFE CYCLE
     
     public override func viewDidLoad() {
         super.viewDidLoad()
         
-        isTimeIncluded = !(!isTimeIncluded)
+        updateTimeButtonTitle()
     }
 }
 
