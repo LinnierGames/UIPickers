@@ -30,9 +30,10 @@ class ViewController: UIViewController {
     // MARK: - IBACTIONS
     
     @IBAction func pressPicker(_ sender: Any) {
-        let vcDate = UIPickerViewController(headerText: "Header label", messageText: "message label")
-        vcDate.dismissButtonTitle = "Dismiss Button Title"
-        self.present(vcDate, animated: true)
+        let vc = UIPickerViewController(headerText: "Header label", messageText: "message label")
+        vc.dismissButtonTitle = "Dismiss Button Title"
+        vc.cancelButtonTitle = "Cancel"
+        self.present(vc, animated: true)
     }
     
     @IBOutlet weak var buttonEntryPicker: UIButton!

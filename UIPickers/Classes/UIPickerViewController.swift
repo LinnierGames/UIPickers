@@ -18,6 +18,8 @@ open class UIPickerViewController: UIViewController {
     
     open var dismissButtonTitle: String? = "Done"
     
+    open var cancelButtonTitle: String?
+    
     private lazy var stackView: UIStackView = {
         let sv = UIStackView()
         sv.axis = .vertical
@@ -73,6 +75,8 @@ open class UIPickerViewController: UIViewController {
      */
     open func pressDone(button: UIButton) { }
     
+    //TODO: func addButton(title.., action..)
+    
     open override func loadView() {
         super.loadView()
         
@@ -99,6 +103,7 @@ open class UIPickerViewController: UIViewController {
                 self.stackView.addArrangedSubview(aView)
             }
         
+        //TODO: combine buttons in a seperate stackview
         //ok button
         if let buttonTitle = self.dismissButtonTitle {
             let okButton = UIButton(type: .system)
@@ -106,6 +111,23 @@ open class UIPickerViewController: UIViewController {
             okButton.setTitle(buttonTitle, for: .normal)
             okButton.titleLabel!.font = UIFont.boldSystemFont(ofSize: 20)
             self.stackView.addArrangedSubview(okButton)
+        }
+        
+        //cancel button
+        if let cancelButtonTitle = self.cancelButtonTitle {
+            let cancelButton = UIButton(type: .system)
+            cancelButton.setTitle(cancelButtonTitle, for: .normal)
+            cancelButton.titleLabel?.font = UIFont.systemFont(ofSize: 17.0)
+            cancelButton.addTarget(self, action: #selector(pressCancel(_:)), for: .touchUpInside)
+            
+            cancelButton.translatesAutoresizingMaskIntoConstraints = false
+            self.stackView.addArrangedSubview(cancelButton)
+            
+            let tapDismissGesture = UITapGestureRecognizer(target: self, action: #selector(pressCancel(_:)))
+            let dismissView = UIView(frame: self.view.bounds)
+            dismissView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            dismissView.addGestureRecognizer(tapDismissGesture)
+            self.view.insertSubview(dismissView, at: 0)
         }
         
         //Layout
@@ -128,6 +150,10 @@ open class UIPickerViewController: UIViewController {
     
     @objc private func pressDone(_ button: UIButton) {
         self.pressDone(button: button)
+        self.presentingViewController?.dismiss(animated: true)
+    }
+    
+    @objc private func pressCancel(_ button: UIButton) {
         self.presentingViewController?.dismiss(animated: true)
     }
     
