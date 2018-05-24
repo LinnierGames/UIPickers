@@ -31,8 +31,15 @@ class ViewController: UIViewController {
     
     @IBAction func pressPicker(_ sender: Any) {
         let vc = UIPickerViewController(headerText: "Header label", messageText: "message label")
-        vc.dismissButtonTitle = "Dismiss Button Title"
-        vc.cancelButtonTitle = "Cancel"
+        let action1 = UIPickerAction(title: "Dismiss Button Title") { (action) in
+            print("press dismiss")
+        }
+        
+        let cancelAction = UIPickerAction(title: "Done", style: .cancel)
+        vc.addAction(cancelAction)
+        vc.addAction(action1)
+        vc.addAction(action1)
+        vc.addAction(action1)
         self.present(vc, animated: true)
     }
     
@@ -41,6 +48,8 @@ class ViewController: UIViewController {
         let vc = UIEntryPickerViewController(headerText: "Duration", messageText: "How long will this task take to complete", values: entries)
         vc.delegate = self
         vc.defaultEntryIndex = 4
+        let cancelAction = UIPickerAction(title: "Done")
+        vc.addAction(cancelAction)
         self.present(vc, animated: true)
     }
     
@@ -48,6 +57,8 @@ class ViewController: UIViewController {
     @IBAction func pressDateAndTimePicker(_ sender: Any) {
         let vc = UICalendarDatePickerViewController(headerText: "Deadline", messageText: "When is this task due", date: Date(timeIntervalSince1970: 1))
         vc.delegate = self
+        let cancelAction = UIPickerAction(title: "Done")
+        vc.addAction(cancelAction)
         self.present(vc, animated: true)
     }
     
@@ -61,10 +72,8 @@ extension ViewController: UIEntryPickerViewControllerDelegate {
     }
 }
 
-extension ViewController: UIDatePickerViewControllerDelegate {
-    func datePicker(_ datePicker: UIDatePickerViewController, didFinishWith selectedDate: Date) {
-        guard let datePicker = datePicker as? UICalendarDatePickerViewController else { return }
-        
-        print(selectedDate, datePicker.isTimeIncluded)
+extension ViewController: UICalendarDatePickerViewControllerDelegate {
+    func calendarDatePicker(_ calendarDatePicker: UICalendarDatePickerViewController, didFinishWith selectedDate: Date, timeIncluded: Bool) {
+        print(selectedDate, calendarDatePicker.isTimeIncluded)
     }
 }

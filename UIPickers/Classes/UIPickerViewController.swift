@@ -8,17 +8,61 @@
 
 import UIKit
 
+public enum UIPickerActionStyle : Int {
+    case `default`
+    
+    case cancel
+    
+    case destructive
+}
+
+open class UIPickerAction {
+    var title: String
+    var style: UIPickerActionStyle
+    var action: ((UIPickerAction) -> Void)?
+    
+    public init(title: String, style: UIPickerActionStyle = .default, action: ((UIPickerAction) -> Void)? = nil) {
+        self.title = title
+        self.style = style
+        self.action = action
+    }
+}
+
 open class UIPickerViewController: UIViewController {
     
-    //    public weak var delegate: UIEntryPickerViewControllerDelegate?
+    deinit {
+        print("removed \(type(of: self))")
+    }
     
     public var headerText: String?
     
     public var messageText: String?
     
-    open var dismissButtonTitle: String? = "Done"
+    public private(set) var actions: [UIPickerAction] = []
     
-    open var cancelButtonTitle: String?
+    open var dismissOnActionDidTouchUpInside: Bool = true
+    
+    private lazy var stackViewButtonActions: UIStackView = {
+        let sv = UIStackView()
+        sv.axis = .vertical
+        sv.spacing = 16
+        sv.alignment = .fill
+        sv.distribution = .fillEqually
+        sv.translatesAutoresizingMaskIntoConstraints = false
+        
+        return sv
+    }()
+    
+    private lazy var stackViewButtons: UIStackView = {
+        let sv = UIStackView()
+        sv.axis = .vertical
+        sv.spacing = 8
+        sv.alignment = .fill
+        sv.distribution = .fill
+        sv.translatesAutoresizingMaskIntoConstraints = false
+        
+        return sv
+    }()
     
     private lazy var stackView: UIStackView = {
         let sv = UIStackView()
@@ -40,6 +84,8 @@ open class UIPickerViewController: UIViewController {
         
         return container
     }()
+    
+    // MARK: - Inits
     
     public init(headerText: String?, messageText: String? = "") {
         self.headerText = headerText
@@ -65,6 +111,10 @@ open class UIPickerViewController: UIViewController {
     
     // MARK: - VOID METHODS
     
+    public func addAction(_ action: UIPickerAction) {
+        self.actions.append(action)
+    }
+    
     /**
      Override this computed var to add custom views to the internal stack view
      */
@@ -74,8 +124,6 @@ open class UIPickerViewController: UIViewController {
      Override this func to add functionality just before the view controller dismisses
      */
     open func pressDone(button: UIButton) { }
-    
-    //TODO: func addButton(title.., action..)
     
     open override func loadView() {
         super.loadView()
@@ -103,27 +151,54 @@ open class UIPickerViewController: UIViewController {
                 self.stackView.addArrangedSubview(aView)
             }
         
-        //TODO: combine buttons in a seperate stackview
-        //ok button
-        if let buttonTitle = self.dismissButtonTitle {
-            let okButton = UIButton(type: .system)
-            okButton.addTarget(self, action: #selector(pressDone(_:)), for: .touchUpInside)
-            okButton.setTitle(buttonTitle, for: .normal)
-            okButton.titleLabel!.font = UIFont.boldSystemFont(ofSize: 20)
-            self.stackView.addArrangedSubview(okButton)
+        var cancelAction: UIPickerAction?
+        if self.actions.count > 0 {
+            
+            //combine buttons in a seperate stackview
+            for anAction in self.actions {
+                if case .cancel = anAction.style {
+                    if cancelAction == nil {
+                        cancelAction = anAction
+                        continue
+                    } else {
+                        preconditionFailure("only one cancel button can be in an picker view controller")
+                    }
+                }
+                
+                let button = UIButton(type: .system)
+                button.addTarget(for: .touchUpInside) { [weak self] in
+                    if let unwrappedSelf = self, unwrappedSelf.dismissOnActionDidTouchUpInside {
+                        unwrappedSelf.dismissVc()
+                    }
+                    anAction.action?(anAction)
+                }
+                
+                button.setTitle(anAction.title, for: .normal)
+                button.titleLabel!.font = UIFont.boldSystemFont(ofSize: 20)
+                self.stackViewButtonActions.addArrangedSubview(button)
+            }
+            
+            self.stackViewButtons.addArrangedSubview(stackViewButtonActions)
+            self.stackView.addArrangedSubview(self.stackViewButtons)
         }
         
         //cancel button
-        if let cancelButtonTitle = self.cancelButtonTitle {
+        if let cancelAction = cancelAction {
             let cancelButton = UIButton(type: .system)
-            cancelButton.setTitle(cancelButtonTitle, for: .normal)
+            cancelButton.setTitle(cancelAction.title, for: .normal)
             cancelButton.titleLabel?.font = UIFont.systemFont(ofSize: 17.0)
-            cancelButton.addTarget(self, action: #selector(pressCancel(_:)), for: .touchUpInside)
+            cancelButton.addTarget(for: .touchUpInside) { [weak self] in
+                if let unwrappedSelf = self, unwrappedSelf.dismissOnActionDidTouchUpInside {
+                    unwrappedSelf.dismissVc()
+                }
+                cancelAction.action?(cancelAction)
+            }
             
             cancelButton.translatesAutoresizingMaskIntoConstraints = false
-            self.stackView.addArrangedSubview(cancelButton)
+            self.stackViewButtons.addArrangedSubview(cancelButton)
             
-            let tapDismissGesture = UITapGestureRecognizer(target: self, action: #selector(pressCancel(_:)))
+            // tap outside to dismiss
+            let tapDismissGesture = UITapGestureRecognizer(target: self, action: #selector(dismissVc))
             let dismissView = UIView(frame: self.view.bounds)
             dismissView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
             dismissView.addGestureRecognizer(tapDismissGesture)
@@ -146,16 +221,20 @@ open class UIPickerViewController: UIViewController {
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0.55)
     }
     
+    @objc private func dismissVc() {
+        self.presentingViewController?.dismiss(animated: true)
+    }
+    
     // MARK: - IBACTIONS
     
-    @objc private func pressDone(_ button: UIButton) {
-        self.pressDone(button: button)
-        self.presentingViewController?.dismiss(animated: true)
-    }
-    
-    @objc private func pressCancel(_ button: UIButton) {
-        self.presentingViewController?.dismiss(animated: true)
-    }
+//    @objc private func pressDone(_ button: UIButton) {
+//        self.pressDone(button: button)
+//        self.dismiss()
+//    }
+//
+//    @objc private func pressCancel(_ button: UIButton) {
+//        self.dismiss()
+//    }
     
     // MARK: - LIFE CYCLE
     

@@ -25,8 +25,9 @@ public class UICalendarDatePickerViewController: UIDatePickerViewController {
         get { return self.delegate as! UICalendarDatePickerViewControllerDelegate? }
     }
     
-    public var canAddTime: Bool = false
-    public var isTimeRequired: Bool = false
+    //TODO: require time or exclude time
+    private var canAddTime: Bool = false
+    private var isTimeRequired: Bool = false
     
     private lazy var addTimeButton: UIOptionButton = {
         let button = UIOptionButton(type: .TitleButtonAndClearAction)
@@ -75,15 +76,26 @@ public class UICalendarDatePickerViewController: UIDatePickerViewController {
 
 extension UICalendarDatePickerViewController: UIOptionButtonDelegate {
     public func optionButton(_ optionButton: UIOptionButton, didPressTitle button: UIButton) {
-        let timePickerVc = UIDatePickerViewController(headerText: nil, messageText: "select a time", date: self.date)
+        let timePickerVc = UIDatePickerViewController(
+            headerText: nil,
+            messageText: "select a time",
+            date: self.date
+        )
         timePickerVc.datePickerMode = .time
-        timePickerVc.delegate = self
         
         //if adding a new time, set only the time of `self.date` to `Date()`
         if isTimeIncluded == false {
             let timeDate = self.date.equating(to: Date(), by: [.hour, .minute])
             timePickerVc.date = timeDate
         }
+        
+        timePickerVc.addAction(UIPickerAction(title: "Done", action: { [weak self] (action) in
+            guard let unwrappedSelf = self else { return }
+            
+            //update self.date with only the time from UIDatePickerVc
+            unwrappedSelf.date = timePickerVc.date
+            unwrappedSelf.updateTimeButtonTitle()
+        }))
         
         self.present(timePickerVc, animated: true) { [unowned self] in
             self.isTimeIncluded = true
@@ -92,15 +104,6 @@ extension UICalendarDatePickerViewController: UIOptionButtonDelegate {
     
     public func optionButton(_ optionButton: UIOptionButton, didPressClear button: UIButton) {
         isTimeIncluded = false
-    }
-}
-
-extension UICalendarDatePickerViewController: UIDatePickerViewControllerDelegate {
-    public func datePicker(_ datePicker: UIDatePickerViewController, didFinishWith selectedDate: Date) {
-        
-        //update self.date with only the time from UIDatePickerVc
-        self.date = selectedDate
-        updateTimeButtonTitle()
     }
 }
 

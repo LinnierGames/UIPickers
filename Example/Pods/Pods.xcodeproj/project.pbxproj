@@ -37,6 +37,7 @@
 		CAFA5E486BCE117A7D8C0FBF9DA6666B /* UIImage+Compare.h in Headers */ = {isa = PBXBuildFile; fileRef = 432938111B6FF0189EFFEDF2F845B308 /* UIImage+Compare.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		DB7A106243AC974FC7EBEB00B506C786 /* FBSnapshotTestCasePlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A2557E7CE20AACCD1B28B1CD1F920D /* FBSnapshotTestCasePlatform.m */; };
 		E301A35ECE8D77008C367F345D8BFAC6 /* Pods-UIPickers_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC52601EE0CEC15E60F9CC34262A082 /* Pods-UIPickers_Tests-dummy.m */; };
+		E9C9D83F20B76CC100E96EAA /* UIControl+Closures.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C9D83D20B76CBA00E96EAA /* UIControl+Closures.swift */; };
 		E9E91D2120AE302F0039E3ED /* UIOptionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E91D1C20AE302F0039E3ED /* UIOptionButton.swift */; };
 		E9E91D2220AE302F0039E3ED /* UIEntryPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E91D1D20AE302F0039E3ED /* UIEntryPickerView.swift */; };
 		E9E91D2320AE302F0039E3ED /* UIPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E91D1E20AE302F0039E3ED /* UIPickerViewController.swift */; };
@@ -122,6 +123,7 @@
 		D97545C39C4A5EE2631DD9FFECE76A40 /* SwiftSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftSupport.swift; path = FBSnapshotTestCase/SwiftSupport.swift; sourceTree = "<group>"; };
 		E37899BD4B349060AA147E2A3721D3A2 /* FBSnapshotTestCase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCase.h; path = FBSnapshotTestCase/FBSnapshotTestCase.h; sourceTree = "<group>"; };
 		E7E1C8B0EF7A1EAC4FEE9C715648823A /* Pods-UIPickers_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-UIPickers_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E9C9D83D20B76CBA00E96EAA /* UIControl+Closures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIControl+Closures.swift"; path = "UIPickers/Classes/UIControl+Closures.swift"; sourceTree = "<group>"; };
 		E9E91D1C20AE302F0039E3ED /* UIOptionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIOptionButton.swift; path = UIPickers/Classes/UIOptionButton.swift; sourceTree = "<group>"; };
 		E9E91D1D20AE302F0039E3ED /* UIEntryPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIEntryPickerView.swift; path = UIPickers/Classes/UIEntryPickerView.swift; sourceTree = "<group>"; };
 		E9E91D1E20AE302F0039E3ED /* UIPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIPickerViewController.swift; path = UIPickers/Classes/UIPickerViewController.swift; sourceTree = "<group>"; };
@@ -294,6 +296,7 @@
 				E9E91D1C20AE302F0039E3ED /* UIOptionButton.swift */,
 				E9E91D1E20AE302F0039E3ED /* UIPickerViewController.swift */,
 				E9E91D2820AE3EF00039E3ED /* Date+FormattedStrings.swift */,
+				E9C9D83D20B76CBA00E96EAA /* UIControl+Closures.swift */,
 				E9D32228B8930BFC0845B874FD67DE18 /* Pod */,
 				D8A260172CC3992F92919A4FB7B3D985 /* Support Files */,
 			);
@@ -564,6 +567,7 @@
 				E9E91D2120AE302F0039E3ED /* UIOptionButton.swift in Sources */,
 				E9E91D2920AE3EF10039E3ED /* Date+FormattedStrings.swift in Sources */,
 				E9E91D2320AE302F0039E3ED /* UIPickerViewController.swift in Sources */,
+				E9C9D83F20B76CC100E96EAA /* UIControl+Closures.swift in Sources */,
 				A90F1DE8054D658B3D5E394DE09E2CC9 /* UIPickers-dummy.m in Sources */,
 				E9E91D2420AE302F0039E3ED /* UIEntryPickerViewController.swift in Sources */,
 			);
