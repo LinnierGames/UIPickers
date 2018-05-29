@@ -45,7 +45,7 @@ open class UIEntryPickerViewController: UIPickerViewController {
     
     // MARK: - RETURN VALUES
     
-    open override func layoutConent() -> [UIView] {
+    open override func layoutContent() -> [UIView] {
         
         //scroll view picker
         return [pickerView]

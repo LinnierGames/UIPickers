@@ -118,7 +118,7 @@ open class UIPickerViewController: UIViewController {
     /**
      Override this computed var to add custom views to the internal stack view
      */
-    open func layoutConent() -> [UIView] { return [] }
+    open func layoutContent() -> [UIView] { return [] }
     
     /**
      Override this func to add functionality just before the view controller dismisses
@@ -146,7 +146,7 @@ open class UIPickerViewController: UIViewController {
             self.stackView.addArrangedSubview(descriptionLabel)
         }
         
-        self.layoutConent()
+        self.layoutContent()
             .forEach { [unowned self] (aView) in
                 self.stackView.addArrangedSubview(aView)
             }

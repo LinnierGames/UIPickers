@@ -35,7 +35,7 @@ class ViewController: UIViewController {
             print("press dismiss")
         }
         
-        let cancelAction = UIPickerAction(title: "Done", style: .cancel)
+        let cancelAction = UIPickerAction(title: "Cancel", style: .cancel)
         vc.addAction(cancelAction)
         vc.addAction(action1)
         vc.addAction(action1)

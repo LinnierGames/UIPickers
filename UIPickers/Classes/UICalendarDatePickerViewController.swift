@@ -40,11 +40,11 @@ public class UICalendarDatePickerViewController: UIDatePickerViewController {
     
     // MARK: - VOID METHODS
     
-    public override func layoutConent() -> [UIView] {
+    public override func layoutContent() -> [UIView] {
         
         //TODO: configure datePickerView
         
-        let content = super.layoutConent()
+        let content = super.layoutContent()
         
         return content + [addTimeButton]
     }
@@ -157,7 +157,7 @@ public class UIDatePickerViewController: UIPickerViewController {
     
     // MARK: - VOID METHODS
     
-    public override func layoutConent() -> [UIView] {
+    public override func layoutContent() -> [UIView] {
         return [datePickerView]
     }
     
