@@ -1,0 +1,6 @@
+framework module UniversalExtensions {
+  umbrella header "UniversalExtensions-umbrella.h"
+
+  export *
+  module * { export * }
+}
