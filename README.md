@@ -5,11 +5,31 @@
 [![License](https://img.shields.io/cocoapods/l/UIPickers.svg?style=flat)](https://cocoapods.org/pods/UIPickers)
 [![Platform](https://img.shields.io/cocoapods/p/UIPickers.svg?style=flat)](https://cocoapods.org/pods/UIPickers)
 
-## Example
+## Examples
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+### Basic Message and Date Picker
 
-## Requirements
+![basic message and date picker 2x](https://user-images.githubusercontent.com/1758210/40519096-aa01fdea-5f72-11e8-96d5-8164b481b69d.png)
+
+### UIEntryPickerViewController
+
+![uientrypickervc 2x](https://user-images.githubusercontent.com/1758210/40519108-b4aa380c-5f72-11e8-896e-27f161df03e0.png)
+
+### With a Custom UIView
+
+![subclassing uipickervc 2x](https://user-images.githubusercontent.com/1758210/40519203-35903d54-5f73-11e8-940f-862ef3a247b8.png)
+
+You'll need to subclass `UIPickerViewController` and override `func layoutConent() -> [UIView]`. This currently returns an empty array.
+
+```swift
+  open override func layoutConent() -> [UIView] {
+      ...
+      
+      return [viewA, viewB, viewC, ...]
+  }
+```
+
+This method, `layoutContent()` is invoked when the view controller is becoming presented.
 
 ## Installation
 
