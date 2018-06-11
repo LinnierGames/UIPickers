@@ -35,9 +35,16 @@ open class UIEntryPickerView: UIView {
     }
     
     public var selectedPage: Int {
-        let pageSize = self.scrollView.frame.size
-        
-        return Int(self.scrollView.contentOffset.x / pageSize.width)
+        set {
+            let pageSize = self.scrollView.frame.size
+            
+            self.scrollView.setContentOffset(CGPoint(x: CGFloat(newValue) * pageSize.width, y: 0), animated: true)
+        }
+        get {
+            let pageSize = self.scrollView.frame.size
+            
+            return Int(self.scrollView.contentOffset.x / pageSize.width)
+        }
     }
     
     public var scrollView: UIScrollView {

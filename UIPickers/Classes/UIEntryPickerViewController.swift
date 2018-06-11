@@ -21,6 +21,15 @@ open class UIEntryPickerViewController: UIPickerViewController {
     
     public var defaultEntryIndex: Int = 0
     
+    public var selectedIndex: Int {
+        set {
+            self.pickerView.selectedPage = newValue
+        }
+        get {
+            return self.pickerView.selectedPage
+        }
+    }
+    
     private lazy var pickerView: UIEntryPickerView = {
         let picker = UIEntryPickerView(focusSize: CGSize(width: 72, height: 72), entries: self.entries)
         
@@ -76,5 +85,4 @@ open class UIEntryPickerViewController: UIPickerViewController {
         //scroll to default page
         self.scrollTo(pageIndex: self.defaultEntryIndex)
     }
-
 }
