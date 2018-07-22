@@ -54,7 +54,8 @@ public class UIOptionButton: UIView {
         button.setContentHuggingPriority(.defaultHigh, for: .horizontal)
         
         button.addTarget(self, action: #selector(pressClearButton(_:)), for: .touchUpInside)
-        button.setTitle("x", for: .normal)
+        button.setImage(#imageLiteral(resourceName: "close"), for: .normal)
+        button.contentEdgeInsets = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
         
         return button
     }()
