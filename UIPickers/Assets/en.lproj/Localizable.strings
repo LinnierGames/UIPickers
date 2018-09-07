@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  Pods
+
+  Created by Erick Sanchez on 9/7/18.
+  
+*/
+
+"DT-date-picker-time-title" = "select a time";

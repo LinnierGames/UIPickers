@@ -34,9 +34,9 @@ Pod::Spec.new do |s|
 
   s.source_files = 'UIPickers/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'UIPickers' => ['UIPickers/Assets/*.png']
-  # }
+  s.resource = {
+    'UIPickers' => ['UIPickers/Assets/*.lproj']
+  }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'

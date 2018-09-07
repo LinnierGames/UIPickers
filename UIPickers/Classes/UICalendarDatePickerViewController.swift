@@ -78,7 +78,7 @@ extension UICalendarDatePickerViewController: UIOptionButtonDelegate {
     public func optionButton(_ optionButton: UIOptionButton, didPressTitle button: UIButton) {
         let timePickerVc = UIDatePickerViewController(
             headerText: nil,
-            messageText: "select a time",
+            messageText: LocalizeUtlitity.datePickerTimeBody,
             date: self.date
         )
         timePickerVc.datePickerMode = .time
@@ -173,4 +173,8 @@ public class UIDatePickerViewController: UIPickerViewController {
     
     // MARK: - LIFE CYCLE
     
+}
+
+fileprivate extension LocalizeUtlitity {
+    static let datePickerTimeBody = String(localized: "DT-date-picker-time-title", comment: "present a message to select a time from a previously selected date")
 }
