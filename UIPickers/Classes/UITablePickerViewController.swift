@@ -43,15 +43,15 @@ open class UITablePickerViewController: UIPickerViewController {
 
 extension UITablePickerViewController: UITableViewDataSource {
     
-    func numberOfSections(in tableView: UITableView) -> Int {
+    open func numberOfSections(in tableView: UITableView) -> Int {
         return 0
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    open func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 0
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    open func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         fatalError("\(#function) not implemented")
     }
 }

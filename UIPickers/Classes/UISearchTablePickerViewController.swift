@@ -14,14 +14,23 @@ public protocol UISearchTablePickerViewControllerDataSource: class {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath, searchTerm: String?) -> UITableViewCell
 }
 
-class UISearchTablePickerViewController: UITablePickerViewController {
+public protocol UISearchTablePickerViewControllerDelegate: class {
+    
+    func searchBar(_ searchBar: UISearchBar, didChange searchTerm: String)
+}
+
+open class UISearchTablePickerViewController: UITablePickerViewController {
 
     // MARK: - VARS
     
     public weak var dataSource: UISearchTablePickerViewControllerDataSource?
+    public weak var delegate: UISearchTablePickerViewControllerDelegate?
     
-    public private(set) var searchBar: UISearchBar = {
+    public var reloadTableViewOnSearchUpdates = true
+    
+    public private(set) lazy var searchBar: UISearchBar = {
         let sb: UISearchBar = UISearchBar.initProgrammatically()
+        sb.delegate = self
         
         return sb
     }()

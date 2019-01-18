@@ -23,6 +23,20 @@ class ViewController: UIViewController {
         .minor(with: "8hr")
     ]
     
+    let names: [String] = [
+        "Hennry",
+        "Billy",
+        "George",
+        "Juan",
+        "Jimmy",
+        "Mike",
+        "Sarah",
+        "Chad",
+        "Stephanie"
+    ]
+    
+    var filtedNames: [String]?
+    
     // MARK: - RETURN VALUES
     
     // MARK: - VOID METHODS
@@ -62,6 +76,22 @@ class ViewController: UIViewController {
         self.present(vc, animated: true)
     }
     
+    @IBAction func pressTablePicker(_ sender: Any) {
+        let vc = UITablePickerViewController(headerText: "Table View", messageText: "this is abstract class")
+        let cancelAction = UIPickerAction(title: "Done")
+        vc.addAction(cancelAction)
+        self.present(vc, animated: true)
+    }
+    
+    @IBAction func pressSearchTablePicker(_ sender: Any) {
+        let vc = UISearchTablePickerViewController(headerText: "Search for things", messageText: "search the data")
+        vc.dataSource = self
+        vc.delegate = self
+        let cancelAction = UIPickerAction(title: "Done")
+        vc.addAction(cancelAction)
+        self.present(vc, animated: true)
+    }
+    
     // MARK: - LIFE CYCLE
     
 }
@@ -75,5 +105,39 @@ extension ViewController: UIEntryPickerViewControllerDelegate {
 extension ViewController: UICalendarDatePickerViewControllerDelegate {
     func calendarDatePicker(_ calendarDatePicker: UICalendarDatePickerViewController, didFinishWith selectedDate: Date, timeIncluded: Bool) {
         print(selectedDate, calendarDatePicker.isTimeIncluded)
+    }
+}
+
+extension ViewController: UISearchTablePickerViewControllerDataSource {
+    func numberOfSections(in tableView: UITableView, searchTerm: String?) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int, searchTerm: String?) -> Int {
+        return filtedNames?.count ?? names.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath, searchTerm: String?) -> UITableViewCell {
+        let cell: UITableViewCell
+        if let dequeuedCell = tableView.dequeueReusableCell(withIdentifier: "cell") {
+            cell = dequeuedCell
+        } else {
+            cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
+        }
+        
+        let names = self.filtedNames ?? self.names
+        cell.textLabel!.text = names[indexPath.row]
+        
+        return cell
+    }
+}
+
+extension ViewController: UISearchTablePickerViewControllerDelegate {
+    func searchBar(_ searchBar: UISearchBar, didChange searchTerm: String) {
+        if searchTerm.isEmpty {
+            filtedNames = nil
+        } else {
+            filtedNames = names.filter { $0.contains(searchTerm) }
+        }
     }
 }
