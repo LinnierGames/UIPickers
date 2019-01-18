@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol UISearchTablePickerViewControllerDataSource: class {
+public protocol UISearchTablePickerViewControllerDataSource: class {
     
     func numberOfSections(in tableView: UITableView, searchTerm: String?) -> Int
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int, searchTerm: String?) -> Int
@@ -28,7 +28,7 @@ class UISearchTablePickerViewController: UITablePickerViewController {
     
     // MARK: - RETURN VALUES
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    override open func numberOfSections(in tableView: UITableView) -> Int {
         guard let dataSource = self.dataSource else {
             return super.numberOfSections(in: tableView)
         }
@@ -44,7 +44,7 @@ class UISearchTablePickerViewController: UITablePickerViewController {
         return dataSource.numberOfSections(in: tableView, searchTerm: term)
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override open func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let dataSource = self.dataSource else {
             return super.tableView(tableView, numberOfRowsInSection: section)
         }
@@ -60,7 +60,7 @@ class UISearchTablePickerViewController: UITablePickerViewController {
         return dataSource.tableView(tableView, numberOfRowsInSection: section, searchTerm: term)
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override open func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let dataSource = self.dataSource else {
             return super.tableView(tableView, cellForRowAt: indexPath)
         }
@@ -76,7 +76,7 @@ class UISearchTablePickerViewController: UITablePickerViewController {
         return dataSource.tableView(tableView, cellForRowAt: indexPath, searchTerm: term)
     }
     
-    override func layoutContent() -> [UIView] {
+    override open func layoutContent() -> [UIView] {
         
         // this contains the table view
         let superContent = super.layoutContent()
@@ -90,4 +90,14 @@ class UISearchTablePickerViewController: UITablePickerViewController {
     
     // MARK: - LIFE CYCLE
 
+}
+
+extension UISearchTablePickerViewController: UISearchBarDelegate {
+    public func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        delegate?.searchBar(searchBar, didChange: searchText)
+        
+        if reloadTableViewOnSearchUpdates {
+            tableView.reloadData()
+        }
+    }
 }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class UITablePickerViewController: UIPickerViewController {
+open class UITablePickerViewController: UIPickerViewController {
     
     // MARK: - VARS
     
@@ -29,7 +29,7 @@ class UITablePickerViewController: UIPickerViewController {
     
     // MARK: - RETURN VALUES
     
-    override func layoutContent() -> [UIView] {
+    override open func layoutContent() -> [UIView] {
         return [tableView]
     }
     
@@ -57,7 +57,7 @@ extension UITablePickerViewController: UITableViewDataSource {
 }
 
 extension UITablePickerViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    open func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
     }
 }
