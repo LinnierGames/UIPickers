@@ -15,17 +15,23 @@ open class UITablePickerViewController: UIPickerViewController {
         let table: UITableView = UITableView.initProgrammatically(from: { .init(frame: .zero, style: .plain) })
         table.dataSource = self
         table.delegate = self
+        self.tableViewHeightConstraint = table.heightAnchor.constraint(equalToConstant: 96)
+        self.tableViewHeightConstraint.isActive = true
         
         return table
     }()
     
-//    override init(headerText: String?, messageText: String?) {
-//        <#code#>
-//    }
-//
-//    required public init?(coder aDecoder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
+    public var tableViewHeight: CGFloat {
+        set {
+            tableViewHeightConstraint.constant = newValue
+            tableView.superview?.layoutIfNeeded()
+        }
+        get {
+            return tableViewHeightConstraint.constant
+        }
+    }
+    
+    private var tableViewHeightConstraint: NSLayoutConstraint!
     
     // MARK: - RETURN VALUES
     
