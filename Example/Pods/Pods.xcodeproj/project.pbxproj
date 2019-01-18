@@ -38,8 +38,9 @@
 		DB7A106243AC974FC7EBEB00B506C786 /* FBSnapshotTestCasePlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A2557E7CE20AACCD1B28B1CD1F920D /* FBSnapshotTestCasePlatform.m */; };
 		E301A35ECE8D77008C367F345D8BFAC6 /* Pods-UIPickers_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC52601EE0CEC15E60F9CC34262A082 /* Pods-UIPickers_Tests-dummy.m */; };
 		E90319D821431C8A009F65B3 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90319D721431C8A009F65B3 /* Localizable.swift */; };
-		E9646FAE21F2518700959AA4 /* UITablePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9646FAC21F2515C00959AA4 /* UITablePickerViewController.swift */; };
-		E9646FB121F2535300959AA4 /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9646FAF21F2534F00959AA4 /* UIView+AutoLayout.swift */; };
+		E9646FB721F2542900959AA4 /* UITablePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9646FB421F2542900959AA4 /* UITablePickerViewController.swift */; };
+		E9646FB821F2542900959AA4 /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9646FB521F2542900959AA4 /* UIView+AutoLayout.swift */; };
+		E9646FB921F2542900959AA4 /* UISearchTablePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9646FB621F2542900959AA4 /* UISearchTablePickerViewController.swift */; };
 		E9C9D83F20B76CC100E96EAA /* UIControl+Closures.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C9D83D20B76CBA00E96EAA /* UIControl+Closures.swift */; };
 		E9E91D2120AE302F0039E3ED /* UIOptionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E91D1C20AE302F0039E3ED /* UIOptionButton.swift */; };
 		E9E91D2220AE302F0039E3ED /* UIEntryPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E91D1D20AE302F0039E3ED /* UIEntryPickerView.swift */; };
@@ -129,8 +130,9 @@
 		E90319D721431C8A009F65B3 /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Localizable.swift; path = UIPickers/Classes/Localizable.swift; sourceTree = "<group>"; };
 		E90319D921431CD3009F65B3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E90319DB21431CEF009F65B3 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
-		E9646FAC21F2515C00959AA4 /* UITablePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITablePickerViewController.swift; sourceTree = "<group>"; };
-		E9646FAF21F2534F00959AA4 /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayout.swift"; sourceTree = "<group>"; };
+		E9646FB421F2542900959AA4 /* UITablePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UITablePickerViewController.swift; path = UIPickers/Classes/UITablePickerViewController.swift; sourceTree = "<group>"; };
+		E9646FB521F2542900959AA4 /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+AutoLayout.swift"; path = "UIPickers/Classes/UIView+AutoLayout.swift"; sourceTree = "<group>"; };
+		E9646FB621F2542900959AA4 /* UISearchTablePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UISearchTablePickerViewController.swift; path = UIPickers/Classes/UISearchTablePickerViewController.swift; sourceTree = "<group>"; };
 		E9C9D83D20B76CBA00E96EAA /* UIControl+Closures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIControl+Closures.swift"; path = "UIPickers/Classes/UIControl+Closures.swift"; sourceTree = "<group>"; };
 		E9E91D1C20AE302F0039E3ED /* UIOptionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIOptionButton.swift; path = UIPickers/Classes/UIOptionButton.swift; sourceTree = "<group>"; };
 		E9E91D1D20AE302F0039E3ED /* UIEntryPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIEntryPickerView.swift; path = UIPickers/Classes/UIEntryPickerView.swift; sourceTree = "<group>"; };
@@ -302,11 +304,12 @@
 				E9E91D1D20AE302F0039E3ED /* UIEntryPickerView.swift */,
 				E9E91D1F20AE302F0039E3ED /* UIEntryPickerViewController.swift */,
 				E9E91D1C20AE302F0039E3ED /* UIOptionButton.swift */,
-				E9646FAC21F2515C00959AA4 /* UITablePickerViewController.swift */,
+				E9646FB621F2542900959AA4 /* UISearchTablePickerViewController.swift */,
+				E9646FB421F2542900959AA4 /* UITablePickerViewController.swift */,
 				E9E91D1E20AE302F0039E3ED /* UIPickerViewController.swift */,
 				E9E91D2820AE3EF00039E3ED /* Date+FormattedStrings.swift */,
 				E9C9D83D20B76CBA00E96EAA /* UIControl+Closures.swift */,
-				E9646FAF21F2534F00959AA4 /* UIView+AutoLayout.swift */,
+				E9646FB521F2542900959AA4 /* UIView+AutoLayout.swift */,
 				E9D32228B8930BFC0845B874FD67DE18 /* Pod */,
 				D8A260172CC3992F92919A4FB7B3D985 /* Support Files */,
 				E90319D721431C8A009F65B3 /* Localizable.swift */,
@@ -580,12 +583,13 @@
 				E9E91D2120AE302F0039E3ED /* UIOptionButton.swift in Sources */,
 				E9E91D2920AE3EF10039E3ED /* Date+FormattedStrings.swift in Sources */,
 				E9E91D2320AE302F0039E3ED /* UIPickerViewController.swift in Sources */,
-				E9646FAE21F2518700959AA4 /* UITablePickerViewController.swift in Sources */,
+				E9646FB721F2542900959AA4 /* UITablePickerViewController.swift in Sources */,
 				E9C9D83F20B76CC100E96EAA /* UIControl+Closures.swift in Sources */,
 				A90F1DE8054D658B3D5E394DE09E2CC9 /* UIPickers-dummy.m in Sources */,
 				E90319D821431C8A009F65B3 /* Localizable.swift in Sources */,
-				E9646FB121F2535300959AA4 /* UIView+AutoLayout.swift in Sources */,
+				E9646FB821F2542900959AA4 /* UIView+AutoLayout.swift in Sources */,
 				E9E91D2420AE302F0039E3ED /* UIEntryPickerViewController.swift in Sources */,
+				E9646FB921F2542900959AA4 /* UISearchTablePickerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
