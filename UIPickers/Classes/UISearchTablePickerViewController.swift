@@ -110,7 +110,5 @@ extension UISearchTablePickerViewController: UISearchBarDelegate {
         if reloadTableViewOnSearchUpdates {
             tableView.reloadData()
         }
-        
-        searchBar.resignFirstResponder()
     }
 }
