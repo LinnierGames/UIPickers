@@ -139,19 +139,23 @@ open class UIPickerViewController: UIViewController {
         
         //Header label
         if let headerText = self.headerText {
-            let headerLabel = UILabel()
+            let headerLabel: UILabel = UILabel.initProgrammatically()
             headerLabel.text = headerText
             headerLabel.font = UIFont.boldSystemFont(ofSize: 24)
             headerLabel.textAlignment = .center
+            headerLabel.cannotCompressInContentView()
+            
             self.stackView.addArrangedSubview(headerLabel)
         }
         
         //Description label
         if let descriptionText = self.messageText {
-            let descriptionLabel = UILabel()
+            let descriptionLabel: UILabel = UILabel.initProgrammatically()
             descriptionLabel.numberOfLines = 0
             descriptionLabel.text = descriptionText
             descriptionLabel.textAlignment = .center
+            descriptionLabel.cannotCompressInContentView()
+            
             self.stackView.addArrangedSubview(descriptionLabel)
         }
         
@@ -176,6 +180,8 @@ open class UIPickerViewController: UIViewController {
                 }
                 
                 let button: UIButton = UIButton.initProgrammatically(from: { .init(type: .system) })
+                button.cannotCompressInContentView()
+                
                 button.addTarget(for: .touchUpInside) { [weak self] in
                     if let unwrappedSelf = self, unwrappedSelf.dismissOnActionDidTouchUpInside {
                         unwrappedSelf.dismissVc()
@@ -195,6 +201,8 @@ open class UIPickerViewController: UIViewController {
         //cancel button
         if let cancelAction = cancelAction {
             let cancelButton: UIButton = UIButton.initProgrammatically(from: { .init(type: .system) })
+            cancelButton.cannotCompressInContentView()
+            
             cancelButton.setTitle(cancelAction.title, for: .normal)
             cancelButton.titleLabel?.font = UIFont.systemFont(ofSize: 17.0)
             cancelButton.addTarget(for: .touchUpInside) { [weak self] in

@@ -30,8 +30,9 @@ open class UISearchTablePickerViewController: UITablePickerViewController {
     
     public private(set) lazy var searchBar: UISearchBar = {
         let sb: UISearchBar = UISearchBar.initProgrammatically()
+        sb.cannotCompressInContentView()
+        
         sb.delegate = self
-        sb.setContentCompressionResistancePriority(.required, for: .vertical)
         
         return sb
     }()

@@ -9,7 +9,8 @@ import UIKit
 
 extension UIView {
     
-    // translatesAutoresizingMaskIntoConstraints
+    // MARK: translatesAutoresizingMaskIntoConstraints
+    
     static func initProgrammatically() -> Self {
         let view = self.init()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -36,5 +37,21 @@ extension UIView {
             aView.translatesAutoresizingMaskIntoConstraints = false
             self.addSubview(aView)
         }
+    }
+    
+    // MARK: updating the content resistance priority
+    
+    /**
+     if invoked, content resistance priority is set to required vertially
+     */
+    func cannotCompressInContentView() {
+        self.setContentCompressionResistancePriority(.required, for: .vertical)
+    }
+    
+    /**
+     if invoked, content resistance priority is set to default hight, or 750, vertially
+     */
+    func canCompressInContentView() {
+        self.setContentCompressionResistancePriority(.defaultHigh, for: .vertical)
     }
 }
