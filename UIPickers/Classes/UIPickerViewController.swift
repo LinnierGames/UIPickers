@@ -40,6 +40,7 @@ open class UIPickerViewController: UIViewController {
     
     public private(set) var actions: [UIPickerAction] = []
     
+    /** if enabled, any tap on an action will also dismiss the picker view */
     open var dismissOnActionDidTouchUpInside: Bool = true
     
     private var keyboardStack = KeyboardStack()
@@ -192,7 +193,7 @@ open class UIPickerViewController: UIViewController {
         
         //cancel button
         if let cancelAction = cancelAction {
-            let cancelButton = UIButton(type: .system)
+            let cancelButton: UIButton = UIButton.initProgrammatically(from: { .init(type: .system) })
             cancelButton.setTitle(cancelAction.title, for: .normal)
             cancelButton.titleLabel?.font = UIFont.systemFont(ofSize: 17.0)
             cancelButton.addTarget(for: .touchUpInside) { [weak self] in
@@ -202,7 +203,6 @@ open class UIPickerViewController: UIViewController {
                 cancelAction.action?(cancelAction)
             }
             
-            cancelButton.translatesAutoresizingMaskIntoConstraints = false
             self.stackViewButtons.addArrangedSubview(cancelButton)
             
             // tap outside to dismiss
@@ -236,7 +236,7 @@ open class UIPickerViewController: UIViewController {
         }
         
         //bottom, or keyboard
-        self.bottomKeyboardConstraint = self.view.bottomAnchor.constraint(greaterThanOrEqualTo: self.containerView.bottomAnchor, constant: verticalPadding)
+        self.bottomKeyboardConstraint = self.view.bottomAnchor.constraint(greaterThanOrEqualTo: self.containerView.bottomAnchor, constant: 0)
         self.bottomKeyboardConstraint.isActive = true
         
         // layout and misc
@@ -265,7 +265,9 @@ open class UIPickerViewController: UIViewController {
 
 extension UIPickerViewController: KeyboardStackDelegate {
     func keyboard(_ keyboard: KeyboardStack, didChangeTo newHeight: CGFloat) {
-        self.bottomKeyboardConstraint.constant = newHeight + verticalPadding
-        self.view.setNeedsLayout()
+        self.bottomKeyboardConstraint.constant = newHeight
+        UIView.animate(withDuration: 0.15) {
+            self.view.layoutIfNeeded()
+        }
     }
 }
