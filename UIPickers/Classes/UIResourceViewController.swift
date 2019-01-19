@@ -86,5 +86,10 @@ open class UIResourceViewController: UISearchTablePickerViewController {
     // MARK: - IBACTIONS
     
     // MARK: - LIFE CYCLE
-
+    
+    open override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        searchBar.becomeFirstResponder()
+    }
 }

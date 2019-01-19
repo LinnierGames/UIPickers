@@ -37,7 +37,12 @@ open class UISearchTablePickerViewController: UITablePickerViewController {
     // MARK: - IBACTIONS
     
     // MARK: - LIFE CYCLE
-
+    
+    open override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        searchBar.resignFirstResponder()
+    }
 }
 
 extension UISearchTablePickerViewController: UISearchBarDelegate {

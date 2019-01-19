@@ -9,6 +9,37 @@
 import UIKit
 import UIPickers
 
+struct Employee {
+    let name: String
+}
+
+extension Employee: Resource {
+    var title: String {
+        return self.name
+    }
+}
+
+struct EmployeeHandbook: UIResourceViewControllerResourcer {
+    var resources: [Resource] {
+        return [
+            Employee(name: "Erick"),
+            Employee(name: "Noah"),
+            Employee(name: "Nils"),
+            Employee(name: "Charels"),
+            Employee(name: "Sara"),
+            Employee(name: "Lani"),
+            Employee(name: "Karen"),
+            Employee(name: "Shane"),
+        ]
+    }
+    
+    var predicateSearch: (Resource, String) -> Bool {
+        return { employee, searchTerm in
+            return employee.title.lowercased().contains(searchTerm.lowercased())
+        }
+    }
+}
+
 class ViewController: UIViewController {
     
     let entries: [UIEntryPickerView.Entry] = [
@@ -62,6 +93,7 @@ class ViewController: UIViewController {
         let vc = UIEntryPickerViewController(headerText: "Duration", messageText: "How long will this task take to complete", values: entries)
         vc.delegate = self
         vc.defaultEntryIndex = 4
+        
         let cancelAction = UIPickerAction(title: "Done")
         vc.addAction(cancelAction)
         self.present(vc, animated: true)
@@ -71,6 +103,7 @@ class ViewController: UIViewController {
     @IBAction func pressDateAndTimePicker(_ sender: Any) {
         let vc = UICalendarDatePickerViewController(headerText: "Deadline", messageText: "When is this task due", date: Date(timeIntervalSince1970: 1))
         vc.delegate = self
+        
         let cancelAction = UIPickerAction(title: "Done")
         vc.addAction(cancelAction)
         self.present(vc, animated: true)
@@ -78,20 +111,32 @@ class ViewController: UIViewController {
     
     @IBAction func pressTablePicker(_ sender: Any) {
         let vc = UITablePickerViewController(headerText: "Table View", messageText: "this is abstract class")
+        
         let cancelAction = UIPickerAction(title: "Done")
         vc.addAction(cancelAction)
         self.present(vc, animated: true)
     }
     
     @IBAction func pressSearchTablePicker(_ sender: Any) {
-        let vc = UISearchTablePickerViewController(headerText: "Search for things", messageText: "search the data")
-        vc.dataSource = self
-        vc.delegate = self
-        let doneAction = UIPickerAction(title: "Done")
-        vc.addAction(doneAction)
+//        let vc = UISearchTablePickerViewController(headerText: "Search for things", messageText: "search the data")
+//        vc.dataSource = self
+//        vc.delegate = self
+//
+//        let doneAction = UIPickerAction(title: "Done")
+//        vc.addAction(doneAction)
+//        let cancelAction = UIPickerAction.init(title: "Cancel", style: .cancel)
+//        vc.addAction(cancelAction)
+//        self.present(vc, animated: true)
+    }
+    
+    @IBAction func pressResourceSearchTablePicker(_ sender: Any) {
+        let employeeStack = EmployeeHandbook()
+        let vc = UIResourceViewController(headerText: "Employees", messageText: "select an employee", resourcer: employeeStack)
+        
         let cancelAction = UIPickerAction.init(title: "Cancel", style: .cancel)
         vc.addAction(cancelAction)
         self.present(vc, animated: true)
+        
     }
     
     // MARK: - LIFE CYCLE
@@ -110,36 +155,36 @@ extension ViewController: UICalendarDatePickerViewControllerDelegate {
     }
 }
 
-extension ViewController: UISearchTablePickerViewControllerDataSource {
-    func numberOfSections(in tableView: UITableView, searchTerm: String?) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int, searchTerm: String?) -> Int {
-        return filtedNames?.count ?? names.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath, searchTerm: String?) -> UITableViewCell {
-        let cell: UITableViewCell
-        if let dequeuedCell = tableView.dequeueReusableCell(withIdentifier: "cell") {
-            cell = dequeuedCell
-        } else {
-            cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
-        }
-        
-        let names = self.filtedNames ?? self.names
-        cell.textLabel!.text = names[indexPath.row]
-        
-        return cell
-    }
-}
-
-extension ViewController: UISearchTablePickerViewControllerDelegate {
-    func searchBar(_ searchBar: UISearchBar, didChange searchTerm: String) {
-        if searchTerm.isEmpty {
-            filtedNames = nil
-        } else {
-            filtedNames = names.filter { $0.contains(searchTerm) }
-        }
-    }
-}
+//extension ViewController: UISearchTablePickerViewControllerDataSource {
+//    func numberOfSections(in tableView: UITableView, searchTerm: String?) -> Int {
+//        return 1
+//    }
+//
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int, searchTerm: String?) -> Int {
+//        return filtedNames?.count ?? names.count
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath, searchTerm: String?) -> UITableViewCell {
+//        let cell: UITableViewCell
+//        if let dequeuedCell = tableView.dequeueReusableCell(withIdentifier: "cell") {
+//            cell = dequeuedCell
+//        } else {
+//            cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
+//        }
+//
+//        let names = self.filtedNames ?? self.names
+//        cell.textLabel!.text = names[indexPath.row]
+//
+//        return cell
+//    }
+//}
+//
+//extension ViewController: UISearchTablePickerViewControllerDelegate {
+//    func searchBar(_ searchBar: UISearchBar, didChange searchTerm: String?) {
+//        guard let searchTerm = searchTerm, searchTerm.isEmpty == false else {
+//            return filtedNames = nil
+//        }
+//
+//        filtedNames = names.filter { $0.contains(searchTerm) }
+//    }
+//}

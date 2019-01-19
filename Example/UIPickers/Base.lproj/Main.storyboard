@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="QLw-fk-GGX">
-                                <rect key="frame" x="16" y="226.5" width="343" height="214"/>
+                                <rect key="frame" x="16" y="203.5" width="343" height="260"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iN9-8J-8wn">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
@@ -54,6 +54,13 @@
                                         <state key="normal" title="UISearchTableVc"/>
                                         <connections>
                                             <action selector="pressSearchTablePicker:" destination="dsu-8d-ISb" eventType="touchUpInside" id="fyz-Ru-qmu"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ieV-GE-2Gt">
+                                        <rect key="frame" x="0.0" y="230" width="343" height="30"/>
+                                        <state key="normal" title="UIResourceVc"/>
+                                        <connections>
+                                            <action selector="pressResourceSearchTablePicker:" destination="dsu-8d-ISb" eventType="touchUpInside" id="9oi-Sp-ZjM"/>
                                         </connections>
                                     </button>
                                 </subviews>
