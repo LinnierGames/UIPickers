@@ -168,10 +168,11 @@ open class UIPickerViewController: UIViewController {
                 if case .cancel = anAction.style {
                     if cancelAction == nil {
                         cancelAction = anAction
-                        continue
                     } else {
                         preconditionFailure("only one cancel button can be in an picker view controller")
                     }
+                    
+                    continue
                 }
                 
                 let button: UIButton = UIButton.initProgrammatically(from: { .init(type: .system) })
