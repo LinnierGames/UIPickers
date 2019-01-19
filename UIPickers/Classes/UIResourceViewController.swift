@@ -16,6 +16,9 @@ public protocol UIResourceViewControllerResourcer {
     var predicateSearch: (Resource, String) -> Bool { get }
 }
 
+public protocol UIResourceViewControllerDelegate {
+}
+
 open class UIResourceViewController: UISearchTablePickerViewController {
 
     // MARK: - VARS
@@ -41,38 +44,12 @@ open class UIResourceViewController: UISearchTablePickerViewController {
     
     // MARK: - METHODS
     
-    // MARK: - IBACTIONS
-    
-    // MARK: - LIFE CYCLE
-
-}
-
-extension UIResourceViewController: UISearchTablePickerViewControllerDataSource, UISearchTablePickerViewControllerDelegate {
-    
-    public func numberOfSections(in tableView: UITableView, searchTerm: String?) -> Int {
-        return 1
-    }
-    
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int, searchTerm: String?) -> Int {
-        return filteredResult?.count ?? resourcer.resources.count
-    }
-    
-    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath, searchTerm: String?) -> UITableViewCell {
-        let cell: UITableViewCell
-        if let dequeueCell = tableView.dequeueReusableCell(withIdentifier: "cell") {
-            cell = dequeueCell
-        } else {
-            cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
-        }
+    open override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let rows = filteredResult ?? resourcer.resources
-        cell.textLabel!.text = rows[indexPath.row].title
-        
-        return cell
     }
     
-    public func searchBar(_ searchBar: UISearchBar, didChange searchText: String?) {
-        if let searchText = searchText {
+    public override func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.isEmpty == false {
             let predicate = resourcer.predicateSearch
             filteredResult = resourcer.resources.filter { predicate($0, searchText) }
         } else {
@@ -81,4 +58,34 @@ extension UIResourceViewController: UISearchTablePickerViewControllerDataSource,
         
         tableView.reloadData()
     }
+    
+    // MARK: - IBACTIONS
+    
+    // MARK: - LIFE CYCLE
+
 }
+
+//extension UIResourceViewController: UISearchTablePickerViewControllerDataSource, UISearchTablePickerViewControllerDelegate {
+//    
+//    public func numberOfSections(in tableView: UITableView, searchTerm: String?) -> Int {
+//        return 1
+//    }
+//    
+//    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int, searchTerm: String?) -> Int {
+//        return filteredResult?.count ?? resourcer.resources.count
+//    }
+//    
+//    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath, searchTerm: String?) -> UITableViewCell {
+//        let cell: UITableViewCell
+//        if let dequeueCell = tableView.dequeueReusableCell(withIdentifier: "cell") {
+//            cell = dequeueCell
+//        } else {
+//            cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
+//        }
+//        
+//        let rows = filteredResult ?? resourcer.resources
+//        cell.textLabel!.text = rows[indexPath.row].title
+//        
+//        return cell
+//    }
+//}
