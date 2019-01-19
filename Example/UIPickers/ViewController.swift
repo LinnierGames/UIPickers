@@ -40,6 +40,28 @@ struct EmployeeHandbook: UIResourceViewControllerResourcer {
     }
 }
 
+struct EmployeeNetwork: UIAsyncResourceViewControllerResourcer {
+    func fetchResources(completion: @escaping ([Resource]) -> Void) {
+        DispatchQueue.global().async {
+            sleep(2)
+            
+            DispatchQueue.main.async {
+                completion([
+                    Employee(name: "Erick"),
+                    Employee(name: "Noah"),
+                    Employee(name: "Nils"),
+                    Employee(name: "Charels"),
+                    Employee(name: "Sara"),
+                    Employee(name: "Lani"),
+                    Employee(name: "Karen"),
+                    Employee(name: "Shane"),
+                    ]
+                )
+            }
+        }
+    }
+}
+
 class ViewController: UIViewController {
     
     let entries: [UIEntryPickerView.Entry] = [
@@ -136,7 +158,16 @@ class ViewController: UIViewController {
         let cancelAction = UIPickerAction.init(title: "Cancel", style: .cancel)
         vc.addAction(cancelAction)
         self.present(vc, animated: true)
+    }
+    
+    @IBAction func pressAsyncResourceSearchTablePicker(_ sender: Any) {
+        let employeeStack = EmployeeNetwork()
+        let vc = UIAsyncResourceViewController(headerText: "Employees", messageText: "select an employee", asyncResourcer: employeeStack)
+        vc.delegate = self
         
+        let cancelAction = UIPickerAction.init(title: "Cancel", style: .cancel)
+        vc.addAction(cancelAction)
+        self.present(vc, animated: true)
     }
     
     // MARK: - LIFE CYCLE
@@ -188,3 +219,13 @@ extension ViewController: UICalendarDatePickerViewControllerDelegate {
 //        filtedNames = names.filter { $0.contains(searchTerm) }
 //    }
 //}
+
+extension ViewController: UIAsyncResourceViewControllerDelegate {
+    func resource(_ picker: UIAsyncResourceViewController, didSelect resource: Resource) {
+        self.dismiss(animated: true)
+        
+        if let employee = resource as? Employee {
+            print("Selected employee is: ", employee.name)
+        }
+    }
+}

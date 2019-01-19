@@ -7,6 +7,10 @@
 
 import UIKit
 
+public protocol UIAsyncResourceViewControllerDelegate: class {
+    func resource(_ picker: UIAsyncResourceViewController, didSelect resource: Resource)
+}
+
 public protocol UIAsyncResourceViewControllerResourcer {
     func fetchResources(completion: @escaping ([Resource]) -> Void)
 }
@@ -51,6 +55,8 @@ open class UIAsyncResourceViewController: UIResourceViewController {
 
     // MARK: - VARS
     
+    public weak var delegate: UIAsyncResourceViewControllerDelegate?
+    
     var spinner: UIActivityIndicatorView = {
         let spinner: UIActivityIndicatorView = UIActivityIndicatorView.initProgrammatically(from: { .init(activityIndicatorStyle: .gray) })
         spinner.startAnimating()
@@ -71,6 +77,10 @@ open class UIAsyncResourceViewController: UIResourceViewController {
     // MARK: - RETURN VALUES
     
     // MARK: - METHODS
+    
+    open override func resourcePicker(_ picker: UIResourceViewController, didSelect resource: Resource) {
+        delegate?.resource(self, didSelect: resource)
+    }
     
     open override func didFinishLayingOutView() {
         
