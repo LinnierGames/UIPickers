@@ -47,7 +47,7 @@ open class UIPickerViewController: UIViewController {
     
     private let verticalPadding: CGFloat = 16
     
-    private lazy var stackViewButtonActions: UIStackView = {
+    private(set) lazy var stackViewButtonActions: UIStackView = {
         let sv = UIStackView()
         sv.axis = .vertical
         sv.spacing = 16
@@ -58,7 +58,7 @@ open class UIPickerViewController: UIViewController {
         return sv
     }()
     
-    private lazy var stackViewButtons: UIStackView = {
+    private(set) lazy var stackViewButtons: UIStackView = {
         let sv = UIStackView()
         sv.axis = .vertical
         sv.spacing = 8
@@ -69,7 +69,7 @@ open class UIPickerViewController: UIViewController {
         return sv
     }()
     
-    private lazy var stackView: UIStackView = {
+    private(set) lazy var stackView: UIStackView = {
         let sv = UIStackView()
         sv.axis = .vertical
         sv.spacing = 24.0
@@ -80,7 +80,7 @@ open class UIPickerViewController: UIViewController {
         return sv
     }()
     
-    private lazy var containerView: UIView = {
+    private(set) lazy var containerView: UIView = {
         let container = UIView()
         
         container.layer.cornerRadius = 12.0
@@ -133,6 +133,8 @@ open class UIPickerViewController: UIViewController {
      Override this func to add functionality just before the view controller dismisses
      */
     open func pressDone(button: UIButton) { }
+    
+    open func didFinishLayingOutView() { }
     
     open override func loadView() {
         super.loadView()
@@ -251,6 +253,8 @@ open class UIPickerViewController: UIViewController {
         //constraint from the super view vs the safe area
         self.bottomKeyboardConstraint = self.view.bottomAnchor.constraint(greaterThanOrEqualTo: self.containerView.bottomAnchor, constant: verticalPadding)
         self.bottomKeyboardConstraint.isActive = true
+        
+        self.didFinishLayingOutView()
         
         // layout and misc
         self.view.layoutIfNeeded()

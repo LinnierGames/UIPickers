@@ -51,6 +51,13 @@ open class UIAsyncResourceViewController: UIResourceViewController {
 
     // MARK: - VARS
     
+    var spinner: UIActivityIndicatorView = {
+        let spinner: UIActivityIndicatorView = UIActivityIndicatorView.initProgrammatically(from: { .init(activityIndicatorStyle: .gray) })
+        spinner.startAnimating()
+        
+        return spinner
+    }()
+    
     public init(headerText: String?, messageText: String?, asyncResourcer: UIAsyncResourceViewControllerResourcer) {
         self.internalResourcer = Resourcer(asyncResourcer: asyncResourcer)
         
@@ -65,6 +72,14 @@ open class UIAsyncResourceViewController: UIResourceViewController {
     
     // MARK: - METHODS
     
+    open override func didFinishLayingOutView() {
+        
+        //layout loading spinner
+        self.containerView.addSubview(self.spinner)
+        self.spinner.centerXAnchor.constraint(equalTo: self.tableView.centerXAnchor).isActive = true
+        self.spinner.centerYAnchor.constraint(equalTo: self.tableView.centerYAnchor).isActive = true
+    }
+    
     // MARK: - IBACTIONS
     
     // MARK: - LIFE CYCLE
@@ -72,11 +87,12 @@ open class UIAsyncResourceViewController: UIResourceViewController {
     open override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        //TODO: present loading
+        self.tableView.alpha = 0
         internalResourcer.fetch { [weak self] in
             
-            //TODO: dismiss loading
+            self?.spinner.stopAnimating()
             self?.tableView.reloadData()
+            self?.tableView.alpha = 1
         }
     }
 }
