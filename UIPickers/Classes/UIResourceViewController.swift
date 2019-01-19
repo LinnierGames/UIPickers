@@ -16,9 +16,6 @@ public protocol UIResourceViewControllerResourcer {
     var predicateSearch: (Resource, String) -> Bool { get }
 }
 
-public protocol UIResourceViewControllerDelegate {
-}
-
 open class UIResourceViewController: UISearchTablePickerViewController {
 
     // MARK: - VARS
@@ -31,9 +28,6 @@ open class UIResourceViewController: UISearchTablePickerViewController {
         self.resourcer = resourcer
         
         super.init(headerText: headerText, messageText: messageText)
-        
-        dataSource = self
-        delegate = self
     }
     
     required public init?(coder aDecoder: NSCoder) {
@@ -42,13 +36,41 @@ open class UIResourceViewController: UISearchTablePickerViewController {
     
     // MARK: - RETURN VALUES
     
+    open override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    open override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return filteredResult?.count ?? resourcer.resources.count
+    }
+
+    open override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: UITableViewCell
+        if let dequeueCell = tableView.dequeueReusableCell(withIdentifier: "cell") {
+            cell = dequeueCell
+        } else {
+            cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
+        }
+
+        let rows = filteredResult ?? resourcer.resources
+        cell.textLabel!.text = rows[indexPath.row].title
+
+        return cell
+    }
+    
     // MARK: - METHODS
     
     open override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let rows = filteredResult ?? resourcer.resources
+        
+        self.resourcePicker(self, didSelect: rows[indexPath.row])
+    }
+    
+    open func resourcePicker(_ picker: UIResourceViewController, didSelect resource: Resource) {
         
     }
     
-    public override func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+    open override func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText.isEmpty == false {
             let predicate = resourcer.predicateSearch
             filteredResult = resourcer.resources.filter { predicate($0, searchText) }
@@ -56,7 +78,9 @@ open class UIResourceViewController: UISearchTablePickerViewController {
             filteredResult = nil
         }
         
-        tableView.reloadData()
+        if reloadTableViewOnSearchUpdates {
+            tableView.reloadData()
+        }
     }
     
     // MARK: - IBACTIONS
@@ -64,28 +88,3 @@ open class UIResourceViewController: UISearchTablePickerViewController {
     // MARK: - LIFE CYCLE
 
 }
-
-//extension UIResourceViewController: UISearchTablePickerViewControllerDataSource, UISearchTablePickerViewControllerDelegate {
-//    
-//    public func numberOfSections(in tableView: UITableView, searchTerm: String?) -> Int {
-//        return 1
-//    }
-//    
-//    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int, searchTerm: String?) -> Int {
-//        return filteredResult?.count ?? resourcer.resources.count
-//    }
-//    
-//    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath, searchTerm: String?) -> UITableViewCell {
-//        let cell: UITableViewCell
-//        if let dequeueCell = tableView.dequeueReusableCell(withIdentifier: "cell") {
-//            cell = dequeueCell
-//        } else {
-//            cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
-//        }
-//        
-//        let rows = filteredResult ?? resourcer.resources
-//        cell.textLabel!.text = rows[indexPath.row].title
-//        
-//        return cell
-//    }
-//}
