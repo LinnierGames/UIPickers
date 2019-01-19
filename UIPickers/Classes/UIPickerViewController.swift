@@ -42,6 +42,10 @@ open class UIPickerViewController: UIViewController {
     
     open var dismissOnActionDidTouchUpInside: Bool = true
     
+    private var keyboardStack = KeyboardStack()
+    
+    private let verticalPadding: CGFloat = 16
+    
     private lazy var stackViewButtonActions: UIStackView = {
         let sv = UIStackView()
         sv.axis = .vertical
@@ -85,6 +89,8 @@ open class UIPickerViewController: UIViewController {
         return container
     }()
     
+    public private(set) var bottomKeyboardConstraint: NSLayoutConstraint!
+    
     // MARK: - Inits
     
     public init(headerText: String?, messageText: String? = "") {
@@ -95,6 +101,7 @@ open class UIPickerViewController: UIViewController {
         
         self.modalPresentationStyle = .overFullScreen
         self.modalTransitionStyle = .crossDissolve
+        self.keyboardStack.delegate = self
     }
     
     required public init?(coder aDecoder: NSCoder) {
@@ -105,6 +112,7 @@ open class UIPickerViewController: UIViewController {
         
         self.modalPresentationStyle = .overFullScreen
         self.modalTransitionStyle = .crossDissolve
+        self.keyboardStack.delegate = self
     }
     
     // MARK: - RETURN VALUES
@@ -165,7 +173,7 @@ open class UIPickerViewController: UIViewController {
                     }
                 }
                 
-                let button = UIButton(type: .system)
+                let button: UIButton = UIButton.initProgrammatically(from: { .init(type: .system) })
                 button.addTarget(for: .touchUpInside) { [weak self] in
                     if let unwrappedSelf = self, unwrappedSelf.dismissOnActionDidTouchUpInside {
                         unwrappedSelf.dismissVc()
@@ -211,12 +219,27 @@ open class UIPickerViewController: UIViewController {
         self.containerView.trailingAnchor.constraint(equalTo: self.stackView.trailingAnchor, constant: 16.0).isActive = true
         
         self.view.addSubview(self.containerView)
-        self.containerView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
+        let centerConstraint = self.containerView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
+        centerConstraint.priority = .defaultHigh
+        centerConstraint.isActive = true
+        
         self.stackView.topAnchor.constraint(equalTo: self.containerView.topAnchor, constant: 24.0).isActive = true
         self.containerView.bottomAnchor.constraint(equalTo: self.stackView.bottomAnchor, constant: 12.0).isActive = true
         self.containerView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16.0).isActive = true
         self.view.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: 16.0).isActive = true
         
+        // constraint around keyboard and super view
+        
+        //top
+        if #available(iOS 11.0, *) {
+            self.containerView.topAnchor.constraint(greaterThanOrEqualTo: self.view.safeAreaLayoutGuide.topAnchor, constant: verticalPadding).isActive = true
+        }
+        
+        //bottom, or keyboard
+        self.bottomKeyboardConstraint = self.view.bottomAnchor.constraint(greaterThanOrEqualTo: self.containerView.bottomAnchor, constant: verticalPadding)
+        self.bottomKeyboardConstraint.isActive = true
+        
+        // layout and misc
         self.view.layoutIfNeeded()
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0.55)
     }
@@ -238,4 +261,11 @@ open class UIPickerViewController: UIViewController {
     
     // MARK: - LIFE CYCLE
     
+}
+
+extension UIPickerViewController: KeyboardStackDelegate {
+    func keyboard(_ keyboard: KeyboardStack, didChangeTo newHeight: CGFloat) {
+        self.bottomKeyboardConstraint.constant = newHeight + verticalPadding
+        self.view.setNeedsLayout()
+    }
 }

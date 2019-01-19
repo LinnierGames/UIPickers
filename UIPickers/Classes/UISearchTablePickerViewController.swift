@@ -31,6 +31,7 @@ open class UISearchTablePickerViewController: UITablePickerViewController {
     public private(set) lazy var searchBar: UISearchBar = {
         let sb: UISearchBar = UISearchBar.initProgrammatically()
         sb.delegate = self
+        sb.setContentCompressionResistancePriority(.required, for: .vertical)
         
         return sb
     }()
@@ -108,5 +109,7 @@ extension UISearchTablePickerViewController: UISearchBarDelegate {
         if reloadTableViewOnSearchUpdates {
             tableView.reloadData()
         }
+        
+        searchBar.resignFirstResponder()
     }
 }

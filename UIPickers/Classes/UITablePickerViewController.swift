@@ -15,7 +15,8 @@ open class UITablePickerViewController: UIPickerViewController {
         let table: UITableView = UITableView.initProgrammatically(from: { .init(frame: .zero, style: .plain) })
         table.dataSource = self
         table.delegate = self
-        self.tableViewHeightConstraint = table.heightAnchor.constraint(equalToConstant: 96)
+        self.tableViewHeightConstraint = table.heightAnchor.constraint(equalToConstant: 196)
+        self.tableViewHeightConstraint.priority = UILayoutPriority.defaultHigh
         self.tableViewHeightConstraint.isActive = true
         
         return table

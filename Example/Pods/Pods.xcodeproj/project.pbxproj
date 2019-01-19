@@ -42,6 +42,7 @@
 		E9646FB821F2542900959AA4 /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9646FB521F2542900959AA4 /* UIView+AutoLayout.swift */; };
 		E9646FB921F2542900959AA4 /* UISearchTablePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9646FB621F2542900959AA4 /* UISearchTablePickerViewController.swift */; };
 		E9C9D83F20B76CC100E96EAA /* UIControl+Closures.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C9D83D20B76CBA00E96EAA /* UIControl+Closures.swift */; };
+		E9CDB2B921F3A5CB002F5C67 /* KeyboardStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CDB2B821F3A5CB002F5C67 /* KeyboardStack.swift */; };
 		E9E91D2120AE302F0039E3ED /* UIOptionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E91D1C20AE302F0039E3ED /* UIOptionButton.swift */; };
 		E9E91D2220AE302F0039E3ED /* UIEntryPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E91D1D20AE302F0039E3ED /* UIEntryPickerView.swift */; };
 		E9E91D2320AE302F0039E3ED /* UIPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E91D1E20AE302F0039E3ED /* UIPickerViewController.swift */; };
@@ -58,19 +59,19 @@
 			remoteGlobalIDString = 334CE3F5306D100FD8F4B0298D021560;
 			remoteInfo = "Pods-UIPickers_Example";
 		};
-		566D63FDAE2FE6C2457725CE841863C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 34CD2E3428AB802BACA62286FF5074B1;
-			remoteInfo = FBSnapshotTestCase;
-		};
 		DBFF932DE67509D53F68D2F81BAF2C47 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 055C5DF23D08D469496175AC0A70A00D;
 			remoteInfo = UIPickers;
+		};
+		E9CDB2BA21F3AE7D002F5C67 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 34CD2E3428AB802BACA62286FF5074B1;
+			remoteInfo = FBSnapshotTestCase;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -134,6 +135,7 @@
 		E9646FB521F2542900959AA4 /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+AutoLayout.swift"; path = "UIPickers/Classes/UIView+AutoLayout.swift"; sourceTree = "<group>"; };
 		E9646FB621F2542900959AA4 /* UISearchTablePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UISearchTablePickerViewController.swift; path = UIPickers/Classes/UISearchTablePickerViewController.swift; sourceTree = "<group>"; };
 		E9C9D83D20B76CBA00E96EAA /* UIControl+Closures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIControl+Closures.swift"; path = "UIPickers/Classes/UIControl+Closures.swift"; sourceTree = "<group>"; };
+		E9CDB2B821F3A5CB002F5C67 /* KeyboardStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyboardStack.swift; path = UIPickers/Classes/KeyboardStack.swift; sourceTree = "<group>"; };
 		E9E91D1C20AE302F0039E3ED /* UIOptionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIOptionButton.swift; path = UIPickers/Classes/UIOptionButton.swift; sourceTree = "<group>"; };
 		E9E91D1D20AE302F0039E3ED /* UIEntryPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIEntryPickerView.swift; path = UIPickers/Classes/UIEntryPickerView.swift; sourceTree = "<group>"; };
 		E9E91D1E20AE302F0039E3ED /* UIPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIPickerViewController.swift; path = UIPickers/Classes/UIPickerViewController.swift; sourceTree = "<group>"; };
@@ -310,6 +312,7 @@
 				E9E91D2820AE3EF00039E3ED /* Date+FormattedStrings.swift */,
 				E9C9D83D20B76CBA00E96EAA /* UIControl+Closures.swift */,
 				E9646FB521F2542900959AA4 /* UIView+AutoLayout.swift */,
+				E9CDB2B821F3A5CB002F5C67 /* KeyboardStack.swift */,
 				E9D32228B8930BFC0845B874FD67DE18 /* Pod */,
 				D8A260172CC3992F92919A4FB7B3D985 /* Support Files */,
 				E90319D721431C8A009F65B3 /* Localizable.swift */,
@@ -498,7 +501,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				8150BB87BC03D2DFEDDAA9A843902C7D /* PBXTargetDependency */,
+				E9CDB2BB21F3AE7D002F5C67 /* PBXTargetDependency */,
 				836E2BB0F71846EEA181AC49D83B8155 /* PBXTargetDependency */,
 			);
 			name = "Pods-UIPickers_Tests";
@@ -581,6 +584,7 @@
 				E9E91D2520AE302F0039E3ED /* UICalendarDatePickerViewController.swift in Sources */,
 				E9E91D2220AE302F0039E3ED /* UIEntryPickerView.swift in Sources */,
 				E9E91D2120AE302F0039E3ED /* UIOptionButton.swift in Sources */,
+				E9CDB2B921F3A5CB002F5C67 /* KeyboardStack.swift in Sources */,
 				E9E91D2920AE3EF10039E3ED /* Date+FormattedStrings.swift in Sources */,
 				E9E91D2320AE302F0039E3ED /* UIPickerViewController.swift in Sources */,
 				E9646FB721F2542900959AA4 /* UITablePickerViewController.swift in Sources */,
@@ -596,12 +600,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		8150BB87BC03D2DFEDDAA9A843902C7D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FBSnapshotTestCase;
-			target = 34CD2E3428AB802BACA62286FF5074B1 /* FBSnapshotTestCase */;
-			targetProxy = 566D63FDAE2FE6C2457725CE841863C2 /* PBXContainerItemProxy */;
-		};
 		836E2BB0F71846EEA181AC49D83B8155 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-UIPickers_Example";
@@ -613,6 +611,11 @@
 			name = UIPickers;
 			target = 055C5DF23D08D469496175AC0A70A00D /* UIPickers */;
 			targetProxy = DBFF932DE67509D53F68D2F81BAF2C47 /* PBXContainerItemProxy */;
+		};
+		E9CDB2BB21F3AE7D002F5C67 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 34CD2E3428AB802BACA62286FF5074B1 /* FBSnapshotTestCase */;
+			targetProxy = E9CDB2BA21F3AE7D002F5C67 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

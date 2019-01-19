@@ -46,6 +46,7 @@
 		BEFA87C4AE16A48F05DDE897 /* Pods-UIPickers_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIPickers_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UIPickers_Tests/Pods-UIPickers_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		CD5AA6D9BA95315FBE012CAD /* Pods_UIPickers_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UIPickers_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBD0B39A30E4C3696CA8C101 /* Pods-UIPickers_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIPickers_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-UIPickers_Example/Pods-UIPickers_Example.release.xcconfig"; sourceTree = "<group>"; };
+		E910B8F421F2E26600D5F124 /* View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = View.xib; path = ../../../View.xib; sourceTree = "<group>"; };
 		F795FFEC352CE4104D952472 /* Pods-UIPickers_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIPickers_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UIPickers_Tests/Pods-UIPickers_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,6 +106,7 @@
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
+				E910B8F421F2E26600D5F124 /* View.xib */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
