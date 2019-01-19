@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'UIPickers'
-  s.version          = '0.2.0.4'
+  s.version          = '0.3'
   s.summary          = 'Customizable alert views'
 
 # This description is used to generate tags and improve search results.
