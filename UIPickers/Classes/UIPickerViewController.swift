@@ -242,10 +242,14 @@ open class UIPickerViewController: UIViewController {
         //top
         if #available(iOS 11.0, *) {
             self.containerView.topAnchor.constraint(greaterThanOrEqualTo: self.view.safeAreaLayoutGuide.topAnchor, constant: verticalPadding).isActive = true
+        } else {
+            self.containerView.topAnchor.constraint(greaterThanOrEqualTo: self.view.topAnchor, constant: verticalPadding).isActive = true
         }
         
         //bottom, or keyboard
-        self.bottomKeyboardConstraint = self.view.bottomAnchor.constraint(greaterThanOrEqualTo: self.containerView.bottomAnchor, constant: 0)
+        //since the height of the keyboard is from the bottom of the screen when safe area is present,
+        //constraint from the super view vs the safe area
+        self.bottomKeyboardConstraint = self.view.bottomAnchor.constraint(greaterThanOrEqualTo: self.containerView.bottomAnchor, constant: verticalPadding)
         self.bottomKeyboardConstraint.isActive = true
         
         // layout and misc
@@ -274,7 +278,7 @@ open class UIPickerViewController: UIViewController {
 
 extension UIPickerViewController: KeyboardStackDelegate {
     func keyboard(_ keyboard: KeyboardStack, didChangeTo newHeight: CGFloat) {
-        self.bottomKeyboardConstraint.constant = newHeight
+        self.bottomKeyboardConstraint.constant = newHeight + verticalPadding
         UIView.animate(withDuration: 0.15) {
             self.view.layoutIfNeeded()
         }

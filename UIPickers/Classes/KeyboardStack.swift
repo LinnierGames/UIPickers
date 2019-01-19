@@ -39,7 +39,7 @@ class KeyboardStack: NSObject {
         
         if notification.name == Notification.Name.UIKeyboardWillShow ||
             notification.name == Notification.Name.UIKeyboardWillChangeFrame {
-            self.delegate?.keyboard(self, didChangeTo: keyboardRect.height + 64)
+            self.delegate?.keyboard(self, didChangeTo: keyboardRect.height)
         } else {
             self.delegate?.keyboard(self, didChangeTo: 0)
         }
