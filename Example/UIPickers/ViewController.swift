@@ -87,7 +87,9 @@ class ViewController: UIViewController {
         let vc = UISearchTablePickerViewController(headerText: "Search for things", messageText: "search the data")
         vc.dataSource = self
         vc.delegate = self
-        let cancelAction = UIPickerAction(title: "Done")
+        let doneAction = UIPickerAction(title: "Done")
+        vc.addAction(doneAction)
+        let cancelAction = UIPickerAction.init(title: "Cancel", style: .cancel)
         vc.addAction(cancelAction)
         self.present(vc, animated: true)
     }
