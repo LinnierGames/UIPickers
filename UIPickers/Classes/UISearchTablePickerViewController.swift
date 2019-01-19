@@ -16,7 +16,7 @@ public protocol UISearchTablePickerViewControllerDataSource: class {
 
 public protocol UISearchTablePickerViewControllerDelegate: class {
     
-    func searchBar(_ searchBar: UISearchBar, didChange searchTerm: String)
+    func searchBar(_ searchBar: UISearchBar, didChange searchTerm: String?)
 }
 
 open class UISearchTablePickerViewController: UITablePickerViewController {
@@ -105,7 +105,8 @@ open class UISearchTablePickerViewController: UITablePickerViewController {
 
 extension UISearchTablePickerViewController: UISearchBarDelegate {
     public func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        delegate?.searchBar(searchBar, didChange: searchText)
+        let newSearchText: String? = searchText.isEmpty ? nil : searchText
+        delegate?.searchBar(searchBar, didChange: newSearchText)
         
         if reloadTableViewOnSearchUpdates {
             tableView.reloadData()
